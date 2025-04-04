@@ -64,12 +64,7 @@
   max-width: 48rem;
   margin: 0 auto;
   text-align: center;
-  padding: 2rem 2.5rem;
-  background-color: rgba(232, 180, 180, 0.5); /* Using accent-blush with 50% opacity */
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(232, 180, 180, 0.3);
-  border: 1px solid rgba(242, 212, 194, 0.3); /* accent-pia as border */
+  padding: 1rem;
 }
 
 /* Horizontal Navigation Styles - Updated to match theme.ts */
