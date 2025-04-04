@@ -144,29 +144,32 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.8));
+  background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.85));
   display: block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title-accent {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, rgba(99, 102, 241, 0.8), rgba(255, 255, 255, 0.9), rgba(244, 63, 94, 0.8));
+  background-image: linear-gradient(to right, rgba(106, 76, 147, 0.9), rgba(255, 255, 255, 0.95), rgba(138, 43, 93, 0.9));
   display: block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 2rem;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.02em;
   max-width: 36rem;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-actions {
