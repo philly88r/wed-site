@@ -9,9 +9,15 @@
     <link rel="stylesheet" href="css/elegant-hero.css">
     <link rel="stylesheet" href="css/planning-cards.css">
     <link rel="stylesheet" href="css/tilted-scroll.css">
-    <link rel="stylesheet" href="css/how-it-works.css">
+    <link rel="stylesheet" href="css/how-it-works-updated.css">
     <link rel="stylesheet" href="css/about-section.css">
     <link rel="stylesheet" href="css/pricing-section.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/contact-section.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer-updated.css">
+    <link rel="stylesheet" href="css/features-modal.css">
+    <link rel="stylesheet" href="css/navigation-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script type="module" src="js/main.js"></script>
@@ -22,15 +28,11 @@
     <nav class="horizontal-nav">
         <div class="container">
             <div class="logo">
-                <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo">
+                <img src="images/logo/altare-primary-blanc.svg" alt="Altare" class="altare-logo">
             </div>
             <ul>
                 <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#planning"><i class="fas fa-tasks"></i> Planning</a></li>
-                <li><a href="vendors.html"><i class="fas fa-store"></i> Vendors</a></li>
-                <li><a href="#budget"><i class="fas fa-dollar-sign"></i> Budget</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="tutorials.html"><i class="fas fa-book"></i> Tutorials</a></li>
+                <li><a href="login-register.html" class="login-register-btn">Login / Register</a></li>
             </ul>
         </div>
     </nav>
@@ -59,31 +61,8 @@
                     Organize every detail of your special day with our comprehensive wedding planning tools
                 </p>
                 
-                <div class="countdown-container">
-                    <h3 class="subtitle2">Countdown to Your Big Day</h3>
-                    <div class="countdown">
-                        <div class="countdown-item">
-                            <span id="days">00</span>
-                            <span class="countdown-label">Days</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span id="hours">00</span>
-                            <span class="countdown-label">Hours</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span id="minutes">00</span>
-                            <span class="countdown-label">Minutes</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span id="seconds">00</span>
-                            <span class="countdown-label">Seconds</span>
-                        </div>
-                    </div>
-                    <p class="body2">Wedding Date: <span id="wedding-date">June 15, 2025</span></p>
-                </div>
-                
                 <div class="hero-actions">
-                    <a href="#planning" class="btn btn-primary">Get Started</a>
+                    <a href="login-register.html" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -160,7 +139,7 @@
             </div>
             
             <div class="planning-actions">
-                <a href="tasks.html" class="btn btn-primary">View All Tools</a>
+                <button class="btn btn-primary view-all-features-btn">View All Features</button>
             </div>
         </div>
     </section>
@@ -228,123 +207,142 @@
         <!-- Pricing content will be inserted via JavaScript -->
     </section>
 
-    <section id="vendors" class="section">
-        <div class="container">
-            <h2>Wedding Vendors</h2>
-            <p class="body1">Find and manage the perfect vendors for your special day</p>
-            
-            <div class="vendors-categories">
-                <div class="vendor-category">
-                    <i class="fas fa-utensils"></i>
-                    <h3 class="subtitle2">Catering</h3>
-                </div>
-                
-                <div class="vendor-category">
-                    <i class="fas fa-camera"></i>
-                    <h3 class="subtitle2">Photography</h3>
-                </div>
-                
-                <div class="vendor-category">
-                    <i class="fas fa-music"></i>
-                    <h3 class="subtitle2">Entertainment</h3>
-                </div>
-                
-                <div class="vendor-category">
-                    <i class="fas fa-building"></i>
-                    <h3 class="subtitle2">Venues</h3>
-                </div>
+    <!-- FAQ Section with Accordion -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <p class="faq-subtitle">Find answers to common questions about our wedding planning services and day-of coordination</p>
             </div>
             
-            <div class="text-center">
-                <a href="vendors.html" class="btn btn-primary">Browse Vendors</a>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-chevron-right accordion-icon"></i>
+                        What is day-of wedding coordination?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Day-of wedding coordination is a service where our professional coordinators manage all the details of your wedding day, allowing you and your loved ones to fully enjoy the celebration without stress. Despite the name, our service actually begins several weeks before your wedding with planning meetings, vendor confirmations, and timeline creation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-chevron-right accordion-icon"></i>
+                        How far in advance should I book a day-of coordinator?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>We recommend booking your day-of coordinator at least 6-8 months before your wedding date. Popular wedding dates can book up quickly, especially during peak wedding season (May-October), so securing your coordinator early ensures you'll have professional support for your big day.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-chevron-right accordion-icon"></i>
+                        What's included in the $3,500 day-of coordination fee?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Our day-of coordination package includes:</p>
+                            <ul>
+                                <li>Initial consultation and planning meetings</li>
+                                <li>Vendor confirmation and coordination</li>
+                                <li>Detailed wedding day timeline creation</li>
+                                <li>Rehearsal direction (up to 1 hour)</li>
+                                <li>Full wedding day coverage (up to 12 hours)</li>
+                                <li>Setup and breakdown supervision</li>
+                                <li>Professional coordination team (lead coordinator + assistant)</li>
+                                <li>Emergency kit and vendor management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-chevron-right accordion-icon"></i>
+                        How is day-of coordination different from full wedding planning?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Day-of coordination focuses specifically on executing your wedding day plans, while full wedding planning involves the entire planning process from start to finish. With day-of coordination, you handle most of the planning and vendor selection, and our coordinators step in to ensure everything runs smoothly on the actual wedding day. Full planning includes venue selection, budget management, design concepts, and all vendor recommendations and bookings throughout the entire planning process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-chevron-right accordion-icon"></i>
+                        Can I choose which coordinator will work with me?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Yes! We believe in the importance of a good personality match between couples and their coordinators. After your initial inquiry, we'll schedule consultation calls with available coordinators who match your wedding date and style. You can then select the coordinator you feel most comfortable with. You can view our team's profiles on our <a href="day-of-coordination.html">Day-of Coordination</a> page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-chevron-right accordion-icon"></i>
+                        Do you offer partial planning services?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Yes, we can customize our services to provide partial planning support if you need more assistance than day-of coordination but don't require full planning. This typically includes month-of coordination with additional planning meetings and vendor recommendations in specific categories. Please contact us for a custom quote based on your specific needs.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="budget" class="section">
-        <div class="container">
-            <h2>Budget Tracker</h2>
-            <p class="body1">Keep track of your wedding expenses and stay within budget</p>
-            
-            <div class="budget-overview">
-                <div class="budget-card">
-                    <h3 class="subtitle2">Total Budget</h3>
-                    <p class="budget-amount">$<span id="total-budget">21500</span></p>
-                </div>
-                
-                <div class="budget-card">
-                    <h3 class="subtitle2">Spent</h3>
-                    <p class="budget-amount">$<span id="spent-amount">0</span></p>
-                </div>
-                
-                <div class="budget-card">
-                    <h3 class="subtitle2">Remaining</h3>
-                    <p class="budget-amount">$<span id="remaining-amount">21500</span></p>
-                </div>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="contact-title">Get in Touch</h2>
+                <p class="contact-subtitle">Have questions or need assistance? We're here to help you create your perfect wedding day!</p>
             </div>
-            
-            <div class="budget-categories">
-                <div class="budget-category">
-                    <div class="category-header">
-                        <h4>Venue</h4>
-                        <p>$10,000 allocated</p>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <div class="budget-category">
-                    <div class="category-header">
-                        <h4>Catering</h4>
-                        <p>$5,000 allocated</p>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <div class="budget-category">
-                    <div class="category-header">
-                        <h4>Photography</h4>
-                        <p>$3,000 allocated</p>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="budget.html" class="btn btn-primary">Manage Budget</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p class="body1">Have questions or need assistance? We're here to help!</p>
             
             <div class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your message"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </div>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wedding-date">Wedding Date</label>
+                            <input type="date" id="wedding-date" name="wedding-date">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your wedding plans and how we can help"></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -353,36 +351,36 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo-small">
+                    <img src="images/logo/altare-primary-blanc.svg" alt="Altare" class="altare-logo-small">
                 </div>
                 
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Planning</h4>
                         <ul>
-                            <li><a href="tasks.html">Tasks</a></li>
-                            <li><a href="guests.html">Guest List</a></li>
-                            <li><a href="budget.html">Budget</a></li>
-                            <li><a href="vendors.html">Vendors</a></li>
+                            <li><a href="login-register.html">Tasks</a></li>
+                            <li><a href="login-register.html">Guest List</a></li>
+                            <li><a href="login-register.html">Budget</a></li>
+                            <li><a href="login-register.html">Vendors</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
                         <h4>Resources</h4>
                         <ul>
-                            <li><a href="tutorials.html">Tutorials</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Support</a></li>
+                            <li><a href="login-register.html">Tutorials</a></li>
+                            <li><a href="login-register.html">Blog</a></li>
+                            <li><a href="login-register.html">FAQ</a></li>
+                            <li><a href="login-register.html">Support</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Cookies</a></li>
+                            <li><a href="login-register.html">Terms of Service</a></li>
+                            <li><a href="login-register.html">Privacy Policy</a></li>
+                            <li><a href="login-register.html">Cookies</a></li>
                         </ul>
                     </div>
                 </div>
@@ -396,6 +394,25 @@
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </div>
             </div>
+            
+            <div class="theme-toggle-container">
+                <div class="theme-toggle-wrapper">
+                    <button id="light-theme-btn" class="theme-btn light-btn">
+                        <i class="fas fa-sun"></i>
+                        <span class="sr-only">Light Theme</span>
+                    </button>
+                    
+                    <button id="scroll-top-btn" class="scroll-top-btn">
+                        <i class="fas fa-arrow-up"></i>
+                        <span class="sr-only">Scroll to Top</span>
+                    </button>
+                    
+                    <button id="dark-theme-btn" class="theme-btn dark-btn">
+                        <i class="fas fa-moon"></i>
+                        <span class="sr-only">Dark Theme</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="js/main.js"></script>
@@ -403,5 +420,8 @@
     <script src="js/tilted-scroll.js"></script>
     <script src="js/how-it-works.js"></script>
     <script src="js/pricing-section.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/features-modal.js"></script>
 </body>
 </html>

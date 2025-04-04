@@ -1,6 +1,6 @@
 /* How It Works Section Styles */
 .how-it-works {
-  background-color: var(--accent-blanc);
+  background-color: var(--primary-light); /* Brand color background */
   padding: 60px 0;
   position: relative;
   overflow: hidden;
@@ -57,6 +57,7 @@
   background: linear-gradient(to right, var(--primary-main), var(--accent-blush), var(--accent-pia));
   transform: translateY(-50%);
   z-index: 1;
+  margin: 30px 0; /* Add spacing above and below the line */
 }
 
 .timeline-steps {
@@ -64,6 +65,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
+  padding: 40px 0; /* Add padding above and below the steps */
 }
 
 .timeline-step {
@@ -82,17 +84,18 @@
 }
 
 .step-number {
-  width: 60px;
-  height: 60px;
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
   border-radius: 50%;
   background-color: var(--primary-main);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 28px; /* Larger font size */
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* More space below the icon */
+  margin-top: 30px; /* More space above the icon */
   position: relative;
   box-shadow: 0 5px 15px rgba(10, 70, 151, 0.2);
   transition: all 0.3s ease;
@@ -145,8 +148,8 @@
 
 .step-title {
   color: var(--primary-main);
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem; /* Larger font size */
+  margin-bottom: 15px; /* More space below the title */
   font-weight: 600;
 }
 
@@ -164,8 +167,9 @@
 
 .step-description {
   color: var(--text-primary);
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem; /* Larger font size */
+  line-height: 1.6;
+  margin-bottom: 20px; /* Add space below description */
 }
 
 .step-icon {

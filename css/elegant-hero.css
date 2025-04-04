@@ -8,15 +8,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #030303;
+  background-color: transparent;
 }
 
 .elegant-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(99, 102, 241, 0.05), transparent, rgba(244, 63, 94, 0.05));
-  filter: blur(3rem);
+  background: none;
   pointer-events: none;
 }
 
@@ -73,9 +72,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--primary-main); /* Primary blue from theme.ts */
+  background-color: rgba(248, 225, 231, 0.5) !important; /* Blush color with 50% transparency */
   z-index: 100;
   padding: 1rem 0;
+  box-shadow: none !important;
 }
 
 .horizontal-nav .container {
@@ -109,7 +109,7 @@
 }
 
 .horizontal-nav ul li a {
-  color: white; /* White text on primary blue background */
+  color: var(--primary-main); /* Primary blue text on blush background */
   text-decoration: none;
   font-size: 1rem;
   display: flex;
@@ -179,8 +179,9 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, #030303, transparent, rgba(3, 3, 3, 0.8));
+  background: none;
   pointer-events: none;
+  display: none; /* Hide the overlay completely */
 }
 
 /* Video background integration */

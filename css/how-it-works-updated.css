@@ -1,0 +1,196 @@
+/* How It Works Section Styles - Updated */
+.how-it-works {
+  background-color: var(--accent-nude); /* Purplish accent color */
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-it-works::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/pattern-bg.png');
+  background-size: cover;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.how-it-works .container {
+  position: relative;
+  z-index: 1;
+}
+
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.how-it-works-header h2 {
+  color: var(--primary-main);
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+.how-it-works-header p {
+  color: var(--text-primary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #8A90B8, #A5A9C8, #8A90B8);
+  transform: translateY(-50%);
+  z-index: 1;
+  margin: 30px 0; /* Add spacing above and below the line */
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  padding: 40px 0; /* Add padding above and below the steps */
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.timeline-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-number {
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
+  border-radius: 50%;
+  background-color: #8A90B8; /* Darker shade of the accent-nude color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px; /* Larger font size */
+  font-weight: bold;
+  margin-bottom: 30px; /* More space below the icon */
+  margin-top: 30px; /* More space above the icon */
+  position: relative;
+  box-shadow: 0 5px 15px rgba(138, 144, 184, 0.3); /* Updated shadow to match new color */
+  transition: all 0.3s ease;
+}
+
+.timeline-step:nth-child(1) .step-number,
+.timeline-step:nth-child(2) .step-number,
+.timeline-step:nth-child(3) .step-number,
+.timeline-step:nth-child(4) .step-number {
+  background-color: #8A90B8; /* Consistent purplish color for all steps */
+}
+
+.step-number::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+}
+
+.step-content {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.step-title {
+  color: #6A6FA0; /* Darker purplish color for better readability */
+  font-size: 1.6rem; /* Larger font size */
+  margin-bottom: 15px; /* More space below the title */
+  font-weight: 600;
+}
+
+.timeline-step:nth-child(1) .step-title,
+.timeline-step:nth-child(2) .step-title,
+.timeline-step:nth-child(3) .step-title,
+.timeline-step:nth-child(4) .step-title {
+  color: #6A6FA0; /* Consistent purplish color for all step titles */
+}
+
+.step-description {
+  color: var(--text-primary);
+  font-size: 1.2rem; /* Larger font size */
+  line-height: 1.6;
+  margin-bottom: 20px; /* Add space below description */
+}
+
+.step-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.how-it-works-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .timeline-steps {
+    flex-wrap: wrap;
+  }
+  
+  .timeline-step {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-track {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-step {
+    width: 100%;
+  }
+}

@@ -1,0 +1,109 @@
+/* Navigation Bar Fix - Make completely transparent with white text */
+.horizontal-nav {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Make text white and larger */
+.horizontal-nav ul li a {
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+}
+
+/* Update logo styling for the new SVG - 50% bigger */
+.altare-logo {
+  height: 75px !important;
+  width: auto !important;
+  filter: none !important;
+}
+
+/* Fix for dark mode */
+.body-dark .horizontal-nav {
+  background-color: transparent !important;
+}
+
+.body-dark .horizontal-nav ul li a {
+  color: white !important;
+}
+
+/* Login/Register button */
+.login-register-btn {
+  background-color: #0056b3 !important; /* One solid color */
+  color: white !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 4px !important; /* Rectangular shape */
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin-left: 1rem !important;
+}
+
+.login-register-btn:hover {
+  background-color: #003d7f !important; /* Darker shade on hover */
+  color: white !important;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .horizontal-nav .container {
+    padding: 0.5rem 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  .altare-logo {
+    height: 50px !important; /* Slightly smaller on mobile */
+  }
+  
+  .horizontal-nav ul {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .horizontal-nav ul li {
+    margin-left: 0.5rem !important;
+  }
+  
+  .horizontal-nav ul li a {
+    font-size: 1rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+  
+  .login-register-btn {
+    padding: 0.4rem 0.8rem !important;
+    margin-left: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .horizontal-nav .container {
+    flex-direction: column !important;
+    padding: 0.5rem !important;
+  }
+  
+  .altare-logo {
+    height: 45px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .horizontal-nav ul {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  
+  .horizontal-nav ul li a {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.6rem !important;
+  }
+  
+  .login-register-btn {
+    padding: 0.3rem 0.7rem !important;
+    font-size: 0.85rem !important;
+  }
+}

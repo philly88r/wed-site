@@ -1,0 +1,129 @@
+/* Footer Styles */
+.theme-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px dotted var(--text-secondary);
+  border-radius: 9999px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.light-btn {
+  background-color: var(--primary-main);
+  border-radius: 9999px;
+  margin-right: 12px;
+  color: white;
+}
+
+.dark-btn {
+  margin-left: 12px;
+  border-radius: 9999px;
+  color: var(--text-primary);
+}
+
+.body-dark .light-btn {
+  background: none;
+  color: var(--text-primary);
+}
+
+.body-dark .dark-btn {
+  background-color: #333;
+  color: white;
+}
+
+.scroll-top-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-2px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Dark theme styles */
+.body-dark {
+  --primary-main: #3B82F6;
+  --primary-light: #93C5FD;
+  --primary-dark: #1D4ED8;
+  --accent-main: #F59E0B;
+  --accent-light: #FCD34D;
+  --accent-dark: #B45309;
+  --accent-blanc: #1F2937;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --background: #111827;
+  --card-background: #1F2937;
+  --border-color: #374151;
+}
+
+.body-dark body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.body-dark .horizontal-nav,
+.body-dark footer {
+  background-color: var(--card-background);
+}
+
+.body-dark .pricing-card,
+.body-dark .accordion-item,
+.body-dark .contact-form {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+.body-dark input,
+.body-dark textarea {
+  background-color: var(--background);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.body-dark .btn-submit {
+  background-color: var(--primary-main);
+}
+
+.body-dark .faq-section {
+  background-color: var(--background);
+}
+
+.body-dark .contact-section {
+  background-color: #2D3748;
+}

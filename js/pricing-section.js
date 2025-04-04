@@ -42,24 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
       popular: true,
     },
     {
-      id: "day-of-coordination",
-      name: "Day-of Coordination",
-      price: {
-        monthly: 3500,
-        yearly: 3500,
-      },
-      description: "Let us handle the details on your big day",
-      features: [
-        "Professional Coordination",
-        "Vendor Management",
-        "Timeline Management",
-        "Focus on creating memories",
-        "Experienced coordinators",
-      ],
-      cta: "Learn More",
-      link: "day-of-coordination.html",
-    },
-    {
       id: "professional",
       name: "Professional",
       price: {
@@ -77,23 +59,25 @@ document.addEventListener('DOMContentLoaded', function() {
       cta: "Get Started",
     },
     {
-      id: "enterprise",
-      name: "Custom",
+      id: "day-of-coordination",
+      name: "Day-of Coordination",
       price: {
-        monthly: "Custom",
-        yearly: "Custom",
+        monthly: "$3,500",
+        yearly: "$3,500",
       },
-      description: "For destination weddings",
+      description: "Let us handle the details on your big day",
       features: [
-        "Everything in Professional",
-        "Destination Wedding Support",
-        "Vendor Negotiations",
-        "Travel Arrangements",
-        "Custom Planning Solutions",
+        "Professional Coordination",
+        "Vendor Management",
+        "Timeline Management",
+        "Focus on creating memories",
+        "Experienced coordinators",
       ],
-      cta: "Contact Us",
-      highlighted: true,
+      cta: "Learn More",
+      link: "day-of-coordination.html",
+      oneTime: true,
     },
+
   ];
 
   // Define payment frequencies
@@ -209,7 +193,9 @@ function createPricingCard(tier, frequency) {
   
   // Format price based on type
   const priceValue = tier.price[frequency];
-  if (typeof priceValue === 'number') {
+  if (tier.oneTime) {
+    price.innerHTML = `${priceValue}<span class="pricing-card-price-period"> one-time fee</span>`;
+  } else if (typeof priceValue === 'number') {
     price.innerHTML = `$${priceValue}<span class="pricing-card-price-period">/${frequency === 'monthly' ? 'mo' : 'yr'}</span>`;
   } else {
     price.textContent = priceValue;
@@ -284,7 +270,9 @@ function updatePrices(frequency) {
     const priceElement = card.querySelector('.pricing-card-price');
     const priceValue = tier.price[frequency];
     
-    if (typeof priceValue === 'number') {
+    if (tier.oneTime) {
+      priceElement.innerHTML = `${priceValue}<span class="pricing-card-price-period"> one-time fee</span>`;
+    } else if (typeof priceValue === 'number') {
       priceElement.innerHTML = `$${priceValue}<span class="pricing-card-price-period">/${frequency === 'monthly' ? 'mo' : 'yr'}</span>`;
     } else {
       priceElement.textContent = priceValue;

@@ -52,6 +52,7 @@
 .altare-logo {
     max-width: 200px;
     height: auto;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(82%) saturate(2152%) hue-rotate(203deg) brightness(96%) contrast(101%);
 }
 
 .altare-logo-small {
