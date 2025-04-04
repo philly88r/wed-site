@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Directory - Altare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/vendors.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" defer></script>
+    <script type="module" src="js/vendors.js"></script>
+</head>
+<body>
+    <header class="header-inner">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo/altare-color.svg" alt="Altare" class="altare-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#planning">Planning</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="vendors.html" class="active">Vendors</a></li>
+                    <li><a href="index.html#budget">Budget</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="vendor-directory">
+        <div class="container">
+            <div class="vendor-directory-header">
+                <div class="vendor-directory-title">
+                    <h1>Vendor Directory</h1>
+                    <p>Find and connect with the best wedding professionals</p>
+                </div>
+                <div class="vendor-directory-actions">
+                    <a href="vendor-register.html" class="altare-btn">
+                        <i class="fas fa-plus"></i> Register as Vendor
+                    </a>
+                </div>
+            </div>
+            
+            <div class="vendor-dashboard">
+                <div class="vendor-sidebar">
+                    <div class="vendor-categories">
+                        <h3>Categories</h3>
+                        <ul id="category-list">
+                            <li class="active" data-category="all"><a href="#">All Vendors</a></li>
+                            <li data-category="venue"><a href="#">Venues</a></li>
+                            <li data-category="catering"><a href="#">Catering</a></li>
+                            <li data-category="photography"><a href="#">Photography</a></li>
+                            <li data-category="videography"><a href="#">Videography</a></li>
+                            <li data-category="florist"><a href="#">Florists</a></li>
+                            <li data-category="music"><a href="#">Music & Entertainment</a></li>
+                            <li data-category="cake"><a href="#">Cake & Desserts</a></li>
+                            <li data-category="decor"><a href="#">Decor & Rentals</a></li>
+                            <li data-category="beauty"><a href="#">Hair & Makeup</a></li>
+                            <li data-category="officiant"><a href="#">Officiants</a></li>
+                            <li data-category="planner"><a href="#">Wedding Planners</a></li>
+                            <li data-category="transportation"><a href="#">Transportation</a></li>
+                            <li data-category="jewelry"><a href="#">Jewelry</a></li>
+                            <li data-category="attire"><a href="#">Wedding Attire</a></li>
+                            <li data-category="invitations"><a href="#">Invitations</a></li>
+                            <li data-category="favors"><a href="#">Favors & Gifts</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vendor-filters">
+                        <h3>Filters</h3>
+                        
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-filter">
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="price" value="$">
+                                    <span class="checkmark"></span>
+                                    <span class="price-label">$</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="price" value="$$">
+                                    <span class="checkmark"></span>
+                                    <span class="price-label">$$</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="price" value="$$$">
+                                    <span class="checkmark"></span>
+                                    <span class="price-label">$$$</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="price" value="$$$$">
+                                    <span class="checkmark"></span>
+                                    <span class="price-label">$$$$</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Location</h4>
+                            <input type="text" id="location-filter" placeholder="City or ZIP code" class="filter-input">
+                            <div class="radius-filter">
+                                <label for="radius-select">Within</label>
+                                <select id="radius-select" class="radius-select">
+                                    <option value="10">10 miles</option>
+                                    <option value="25">25 miles</option>
+                                    <option value="50" selected>50 miles</option>
+                                    <option value="100">100 miles</option>
+                                    <option value="any">Any distance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vendor-saved">
+                        <h3>Saved Vendors</h3>
+                        <div id="saved-vendors-list" class="saved-vendors-list">
+                            <p class="empty-saved">No vendors saved yet. Click the heart icon to save vendors you're interested in.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vendor-content">
+                    <div class="vendor-header">
+                        <div class="vendor-search">
+                            <input type="text" id="vendor-search" placeholder="Search vendors...">
+                            <button id="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="vendor-sort">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select">
+                                <option value="featured">Featured</option>
+                                <option value="name-asc">Name (A-Z)</option>
+                                <option value="name-desc">Name (Z-A)</option>
+                                <option value="price-asc">Price (Low to High)</option>
+                                <option value="price-desc">Price (High to Low)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="super-vendors-section" class="super-vendors-section">
+                        <h2 class="super-vendors-title">
+                            <i class="fas fa-crown"></i> Super Vendors
+                        </h2>
+                        <div id="super-vendors-list" class="super-vendors-list">
+                            <!-- Super vendors will be added dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div id="vendors-list" class="vendors-list">
+                        <!-- Loading state -->
+                        <div id="vendors-loading" class="vendors-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading vendors...</p>
+                        </div>
+                        
+                        <!-- Empty state -->
+                        <div id="no-vendors" class="no-vendors" style="display: none;">
+                            <i class="fas fa-search"></i>
+                            <h3>No vendors found</h3>
+                            <p>Try adjusting your filters or search terms</p>
+                        </div>
+                        
+                        <!-- Vendor items will be added dynamically -->
+                    </div>
+                    
+                    <div class="vendor-pagination" id="vendor-pagination">
+                        <!-- Pagination will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vendor-registration-cta">
+                <div class="cta-content">
+                    <h2>Are you a wedding professional?</h2>
+                    <p>Join our network of trusted vendors and connect with engaged couples planning their weddings.</p>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-users"></i>
+                            <span>Reach more couples</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-star"></i>
+                            <span>Showcase your work</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Grow your business</span>
+                        </div>
+                    </div>
+                    <a href="vendor-register.html" class="altare-btn">Register as a Vendor</a>
+                </div>
+                <div class="super-vendor-promo">
+                    <div class="super-vendor-badge">
+                        <i class="fas fa-crown"></i> SUPER VENDOR
+                    </div>
+                    <h3>Premium Placement</h3>
+                    <p>Get featured at the top of your category for maximum visibility.</p>
+                    <p class="super-vendor-price">$250/year</p>
+                    <a href="vendor-register.html?super=true" class="altare-btn altare-btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vendor Template (hidden, used for JavaScript) -->
+    <template id="vendor-item-template">
+        <div class="vendor-item">
+            <div class="vendor-super-badge">
+                <i class="fas fa-crown"></i> SUPER VENDOR
+            </div>
+            <div class="vendor-image">
+                <img src="" alt="">
+                <button class="save-vendor-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+            <div class="vendor-details">
+                <h3 class="vendor-name"></h3>
+                <div class="vendor-meta">
+                    <span class="vendor-category"></span>
+                    <span class="vendor-price"></span>
+                </div>
+                <div class="vendor-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span></span>
+                </div>
+                <p class="vendor-description"></p>
+                <div class="vendor-starting-price">Starting at $<span></span></div>
+            </div>
+            <div class="vendor-actions">
+                <a href="#" class="view-profile-btn altare-btn">View Profile</a>
+            </div>
+        </div>
+    </template>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo">
+                    <p>Your Alternative Way to the Altar</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#planning">Planning</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="vendors.html">Vendors</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@altare.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Altare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

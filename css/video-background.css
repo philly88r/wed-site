@@ -1,0 +1,109 @@
+/* Full-screen Video Background Styles */
+
+/* Reset body and html to ensure no margins/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Make hero section full screen */
+.hero {
+    position: relative;
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Video container positioning */
+.video-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1 !important;
+    overflow: hidden !important;
+}
+
+/* Video iframe container */
+.video-iframe-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Video iframe styling */
+.video-iframe-container iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    transform: translate(-50%, -50%) !important;
+    pointer-events: none !important;
+    border: 0 !important;
+}
+
+/* Overlay for better text readability */
+.overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Content positioning */
+.hero .container {
+    position: relative !important;
+    z-index: 1 !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* Header styling */
+header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10 !important;
+    background-color: rgba(10, 70, 151, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+/* Hero content container */
+.hero-content-container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    height: auto !important;
+    padding-top: 80px !important;
+    max-width: 42rem !important;
+}
+
+/* Remove section padding for hero only */
+#home.hero {
+    padding: 0 !important;
+}
+
+/* Ensure countdown container is properly styled */
+.countdown-container {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 1rem !important;
+    padding: 1.5rem !important;
+    margin: 2rem 0 !important;
+    width: 100% !important;
+}

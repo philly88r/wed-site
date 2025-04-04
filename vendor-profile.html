@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Profile - Altare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/vendors.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" defer></script>
+    <script type="module" src="js/vendor-profile.js"></script>
+</head>
+<body>
+    <header class="header-inner">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo/altare-color.svg" alt="Altare" class="altare-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#planning">Planning</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                    <li><a href="index.html#budget">Budget</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="vendor-profile-container">
+        <div class="container">
+            <div id="vendor-profile-loading" class="vendor-profile-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading vendor profile...</p>
+            </div>
+            
+            <div id="vendor-profile-content" class="vendor-profile-content" style="display: none;">
+                <div class="vendor-profile-header">
+                    <div class="vendor-profile-image">
+                        <img id="vendor-image" src="https://via.placeholder.com/800x600?text=Vendor" alt="Vendor">
+                    </div>
+                    <div class="vendor-profile-info">
+                        <div class="vendor-profile-badges">
+                            <span id="super-vendor-badge" class="super-vendor-badge" style="display: none;">
+                                <i class="fas fa-crown"></i> SUPER VENDOR
+                            </span>
+                            <span id="vendor-category-badge" class="vendor-category-badge">Category</span>
+                        </div>
+                        <h1 id="vendor-name" class="vendor-name">Vendor Name</h1>
+                        <div class="vendor-price-info">
+                            <span id="vendor-price-range" class="vendor-price-range">$$</span>
+                            <span id="vendor-starting-price" class="vendor-starting-price">Starting at $XXX</span>
+                        </div>
+                        <div class="vendor-contact-info">
+                            <div class="vendor-contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="vendor-location">City, State</span>
+                            </div>
+                            <div class="vendor-contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span id="vendor-phone">Phone Number</span>
+                            </div>
+                            <div class="vendor-contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span id="vendor-email">Email Address</span>
+                            </div>
+                            <div class="vendor-contact-item" id="vendor-website-container">
+                                <i class="fas fa-globe"></i>
+                                <a id="vendor-website" href="#" target="_blank">Website</a>
+                            </div>
+                        </div>
+                        <div class="vendor-social-links" id="vendor-social-links">
+                            <!-- Social links will be added dynamically -->
+                        </div>
+                        <div class="vendor-actions">
+                            <button class="altare-btn" id="contact-vendor-btn">
+                                <i class="fas fa-envelope"></i> Contact
+                            </button>
+                            <button class="altare-btn altare-btn-outline" id="save-vendor-btn">
+                                <i class="far fa-heart"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vendor-profile-tabs">
+                    <button class="tab-btn active" data-tab="about">About</button>
+                    <button class="tab-btn" data-tab="services">Services</button>
+                    <button class="tab-btn" data-tab="gallery">Gallery</button>
+                    <button class="tab-btn" data-tab="location">Location</button>
+                </div>
+                
+                <div class="vendor-profile-tab-content">
+                    <div class="tab-pane active" id="about-tab">
+                        <h2>About</h2>
+                        <p id="vendor-description">Vendor description will appear here.</p>
+                        
+                        <div class="vendor-stats">
+                            <div class="vendor-stat-item">
+                                <div class="stat-value" id="vendor-years">0</div>
+                                <div class="stat-label">Years in Business</div>
+                            </div>
+                            <div class="vendor-stat-item">
+                                <div class="stat-value" id="vendor-weddings">0</div>
+                                <div class="stat-label">Weddings Per Year</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="services-tab">
+                        <h2>Services</h2>
+                        <ul class="vendor-services-list" id="vendor-services-list">
+                            <!-- Services will be added dynamically -->
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane" id="gallery-tab">
+                        <h2>Gallery</h2>
+                        <div class="vendor-gallery" id="vendor-gallery">
+                            <!-- Gallery images will be added dynamically -->
+                        </div>
+                        
+                        <div class="vendor-video" id="vendor-video-container" style="display: none;">
+                            <h3>Video</h3>
+                            <div class="video-wrapper" id="vendor-video">
+                                <!-- Video embed will be added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="location-tab">
+                        <h2>Location</h2>
+                        <div class="vendor-map" id="vendor-map"></div>
+                        
+                        <div class="vendor-location-details">
+                            <div class="vendor-address" id="vendor-full-address">
+                                <!-- Full address will be added dynamically -->
+                            </div>
+                            
+                            <div class="vendor-travel">
+                                <h3>Travel Information</h3>
+                                <p id="vendor-travel-info">This vendor travels up to <span id="vendor-travel-radius">0</span> miles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="vendor-not-found" class="vendor-not-found" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2>Vendor Not Found</h2>
+                <p>The vendor profile you're looking for could not be found.</p>
+                <a href="vendors.html" class="altare-btn">Return to Vendor Directory</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Vendor Modal -->
+    <div id="contact-modal" class="vendor-modal">
+        <div class="vendor-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact <span id="modal-vendor-name">Vendor</span></h2>
+            
+            <form id="contact-vendor-form" class="contact-vendor-form">
+                <input type="hidden" id="vendor-id-input" name="vendor_id">
+                
+                <div class="form-group">
+                    <label for="contact-name">Your Name *</label>
+                    <input type="text" id="contact-name" name="contact_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-email">Your Email *</label>
+                    <input type="email" id="contact-email" name="contact_email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-phone">Your Phone</label>
+                    <input type="tel" id="contact-phone" name="contact_phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="wedding-date">Wedding Date</label>
+                    <input type="date" id="wedding-date" name="wedding_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="altare-btn">Send Message</button>
+                </div>
+            </form>
+            
+            <div id="contact-status" class="contact-status"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo">
+                    <p>Your Alternative Way to the Altar</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#planning">Planning</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="vendors.html">Vendors</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@altare.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Altare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

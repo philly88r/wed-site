@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Altare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery-page.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo/altare-primary.svg" alt="Altare" class="altare-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#planning">Planning</a></li>
+                    <li><a href="#" class="active">Gallery</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                    <li><a href="index.html#budget">Budget</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <h1 class="headline">Wedding Gallery</h1>
+            <p class="body-text">Capture and organize all your special moments in one beautiful collection</p>
+        </div>
+    </section>
+
+    <section class="gallery-controls">
+        <div class="container">
+            <div class="gallery-search">
+                <input type="text" id="gallery-search-input" placeholder="Search photos...">
+                <button id="gallery-search-btn" class="altare-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active altare-btn" data-filter="all">All</button>
+                <button class="filter-btn altare-btn" data-filter="engagement">Engagement</button>
+                <button class="filter-btn altare-btn" data-filter="ceremony">Ceremony</button>
+                <button class="filter-btn altare-btn" data-filter="reception">Reception</button>
+                <button class="filter-btn altare-btn" data-filter="honeymoon">Honeymoon</button>
+            </div>
+            
+            <div class="gallery-upload">
+                <button id="upload-btn" class="altare-btn altare-btn-accent"><i class="fas fa-plus"></i> Add Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-main">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Engagement Photos -->
+                <div class="gallery-item" data-category="engagement">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg" alt="Engagement photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">Engagement Session</h3>
+                                <p class="body-text">Beach proposal at sunset</p>
+                                <span class="gallery-date">March 15, 2024</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="engagement">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg" alt="Engagement photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">Engagement Announcement</h3>
+                                <p class="body-text">City park photoshoot</p>
+                                <span class="gallery-date">March 20, 2024</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ceremony Photos -->
+                <div class="gallery-item" data-category="ceremony">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg" alt="Ceremony photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">Beach Ceremony</h3>
+                                <p class="body-text">Exchanging vows by the ocean</p>
+                                <span class="gallery-date">June 15, 2025</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ceremony">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg" alt="Ceremony photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">First Kiss</h3>
+                                <p class="body-text">Just married moment</p>
+                                <span class="gallery-date">June 15, 2025</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reception Photos -->
+                <div class="gallery-item" data-category="reception">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg" alt="Reception photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">Outdoor Reception</h3>
+                                <p class="body-text">Garden party celebration</p>
+                                <span class="gallery-date">June 15, 2025</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="reception">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/1405528/pexels-photo-1405528.jpeg" alt="Reception photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">First Dance</h3>
+                                <p class="body-text">Dancing under the stars</p>
+                                <span class="gallery-date">June 15, 2025</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Honeymoon Photos -->
+                <div class="gallery-item" data-category="honeymoon">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg" alt="Honeymoon photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">Bali Getaway</h3>
+                                <p class="body-text">Sunset on the beach</p>
+                                <span class="gallery-date">June 20, 2025</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="honeymoon">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg" alt="Honeymoon photo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 class="subheading">Paradise Island</h3>
+                                <p class="body-text">Relaxing in paradise</p>
+                                <span class="gallery-date">June 25, 2025</span>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="gallery-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="gallery-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="gallery-empty" class="gallery-empty" style="display: none;">
+                <i class="fas fa-images"></i>
+                <h3 class="subheading">No Photos Found</h3>
+                <p class="body-text">Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="gallery-lightbox" class="gallery-lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-image" src="" alt="Lightbox image">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title" class="subheading"></h3>
+                <p id="lightbox-description" class="body-text"></p>
+                <span id="lightbox-date" class="gallery-date"></span>
+            </div>
+            <button class="lightbox-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-nav next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="headline">Upload Photos</h2>
+            
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="photo-title">Title</label>
+                    <input type="text" id="photo-title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo-description">Description</label>
+                    <input type="text" id="photo-description" name="description" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo-category">Category</label>
+                    <select id="photo-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="engagement">Engagement</option>
+                        <option value="ceremony">Ceremony</option>
+                        <option value="reception">Reception</option>
+                        <option value="honeymoon">Honeymoon</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo-date">Date</label>
+                    <input type="date" id="photo-date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo-file">Upload Photo</label>
+                    <input type="file" id="photo-file" name="photo" accept="image/*" required>
+                    <div id="photo-preview" class="photo-preview"></div>
+                </div>
+                
+                <button type="submit" class="altare-btn">Upload Photo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="headline">Edit Photo</h2>
+            
+            <form id="edit-form">
+                <input type="hidden" id="edit-photo-id">
+                
+                <div class="form-group">
+                    <label for="edit-photo-title">Title</label>
+                    <input type="text" id="edit-photo-title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-photo-description">Description</label>
+                    <input type="text" id="edit-photo-description" name="description" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-photo-category">Category</label>
+                    <select id="edit-photo-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="engagement">Engagement</option>
+                        <option value="ceremony">Ceremony</option>
+                        <option value="reception">Reception</option>
+                        <option value="honeymoon">Honeymoon</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-photo-date">Date</label>
+                    <input type="date" id="edit-photo-date" name="date" required>
+                </div>
+                
+                <button type="submit" class="altare-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="headline">Delete Photo</h2>
+            <p class="body-text">Are you sure you want to delete this photo? This action cannot be undone.</p>
+            
+            <div class="modal-actions">
+                <button id="confirm-delete" class="altare-btn altare-btn-accent">Delete</button>
+                <button id="cancel-delete" class="altare-btn altare-btn-outline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo">
+                    <p class="body-text">Your alternative way to get to the altar</p>
+                </div>
+                <div class="footer-links">
+                    <h3 class="subheading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#planning">Planning</a></li>
+                        <li><a href="#" class="active">Gallery</a></li>
+                        <li><a href="vendors.html">Vendors</a></li>
+                        <li><a href="index.html#budget">Budget</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 class="subheading">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Altare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>

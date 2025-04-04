@@ -1,0 +1,253 @@
+/* Elegant Hero with Geometric Shapes */
+
+.elegant-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #030303;
+}
+
+.elegant-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(99, 102, 241, 0.05), transparent, rgba(244, 63, 94, 0.05));
+  filter: blur(3rem);
+  pointer-events: none;
+}
+
+.elegant-shapes-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.elegant-shape {
+  position: absolute;
+  will-change: transform;
+}
+
+.elegant-shape-inner {
+  position: relative;
+  will-change: transform;
+}
+
+.elegant-shape-element {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  backdrop-filter: blur(2px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+}
+
+.elegant-shape-after {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-content-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Horizontal Navigation Styles - Updated to match theme.ts */
+.horizontal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-main); /* Primary blue from theme.ts */
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.horizontal-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.horizontal-nav .logo {
+  height: 40px;
+}
+
+.horizontal-nav .logo img {
+  height: 100%;
+}
+
+.horizontal-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.horizontal-nav ul li {
+  position: relative;
+}
+
+.horizontal-nav ul li a {
+  color: white; /* White text on primary blue background */
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.horizontal-nav ul li a:hover {
+  border-bottom-color: var(--secondary-main); /* Firecracker accent color on hover */
+}
+
+.horizontal-nav ul li a.active {
+  border-bottom-color: var(--accent-rose); /* Rose accent for active item */
+}
+
+.horizontal-nav ul li a i {
+  font-size: 0.875rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title-main {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.8));
+  display: block;
+}
+
+.hero-title-accent {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, rgba(99, 102, 241, 0.8), rgba(255, 255, 255, 0.9), rgba(244, 63, 94, 0.8));
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #030303, transparent, rgba(3, 3, 3, 0.8));
+  pointer-events: none;
+}
+
+/* Video background integration */
+.fullscreen-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.fullscreen-video-container iframe {
+  width: 150vw;
+  height: 150vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  opacity: 0.4; /* Dim the video to make text more readable */
+}
+
+/* Section backgrounds */
+#planning {
+  background-color: var(--accent-blanc);
+}
+
+#vendors {
+  background-color: var(--accent-rose);
+}
+
+#budget {
+  background-color: var(--accent-nude);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .horizontal-nav ul {
+    gap: 1rem;
+  }
+  
+  .horizontal-nav ul li a {
+    font-size: 0.875rem;
+  }
+  
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content-inner {
+    padding-top: 80px;
+  }
+}
+
+/* Animation classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 0.4, 0.25, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

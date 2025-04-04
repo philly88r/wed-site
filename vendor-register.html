@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration - Altare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/vendors.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" defer></script>
+    <script type="module" src="js/vendor-register.js"></script>
+</head>
+<body>
+    <header class="header-inner">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo/altare-color.svg" alt="Altare" class="altare-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#planning">Planning</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                    <li><a href="index.html#budget">Budget</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="vendor-register-hero altare-bg-light">
+        <div class="container">
+            <h1 class="headline">Vendor Registration</h1>
+            <p class="body-text">Join our exclusive network of wedding professionals</p>
+        </div>
+    </section>
+
+    <section class="vendor-register-content">
+        <div class="container">
+            <div class="vendor-register-intro">
+                <h2 class="subheading">Why Join Altare?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Reach More Couples</h3>
+                        <p>Connect with engaged couples actively planning their weddings</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Grow Your Business</h3>
+                        <p>Increase bookings and expand your client base</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Showcase Your Work</h3>
+                        <p>Display your portfolio and highlight your services</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-crown"></i>
+                        <h3>Premium Placement</h3>
+                        <p>Upgrade to Super Vendor status for top visibility</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="super-vendor-callout">
+                <div class="super-vendor-badge">
+                    <i class="fas fa-crown"></i> SUPER VENDOR
+                </div>
+                <div class="super-vendor-info">
+                    <h3>Become a Super Vendor</h3>
+                    <p>Get premium placement at the top of your category for maximum visibility. Only one Super Vendor per category!</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Top placement in your category</li>
+                        <li><i class="fas fa-check"></i> Featured on the homepage</li>
+                        <li><i class="fas fa-check"></i> Highlighted profile with special badge</li>
+                        <li><i class="fas fa-check"></i> Priority in search results</li>
+                    </ul>
+                    <div class="super-vendor-price">
+                        <span>$250</span> per year
+                    </div>
+                </div>
+            </div>
+
+            <form id="vendor-registration-form" class="vendor-register-form">
+                <div class="form-section">
+                    <h3>Basic Information</h3>
+                    
+                    <div class="super-vendor-option">
+                        <label class="super-vendor-checkbox">
+                            <input type="checkbox" name="super_vendor" id="super-vendor-checkbox">
+                            <span class="checkmark"></span>
+                            Yes, I want to be a Super Vendor ($250/year)
+                        </label>
+                        <p class="super-vendor-note">You will receive an invoice if your Super Vendor application is approved.</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="business_name">Business Name *</label>
+                            <input type="text" id="business_name" name="business_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="venue">Venue</option>
+                                <option value="catering">Catering</option>
+                                <option value="photography">Photography</option>
+                                <option value="videography">Videography</option>
+                                <option value="florist">Florist</option>
+                                <option value="music">Music/Entertainment</option>
+                                <option value="cake">Cake/Desserts</option>
+                                <option value="decor">Decor/Rentals</option>
+                                <option value="beauty">Hair/Makeup</option>
+                                <option value="officiant">Officiant</option>
+                                <option value="planner">Wedding Planner</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="jewelry">Jewelry</option>
+                                <option value="attire">Wedding Attire</option>
+                                <option value="invitations">Invitations/Stationery</option>
+                                <option value="favors">Favors/Gifts</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact_name">Contact Name *</label>
+                            <input type="text" id="contact_name" name="contact_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_email">Contact Email *</label>
+                            <input type="email" id="contact_email" name="contact_email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact_phone">Contact Phone *</label>
+                            <input type="tel" id="contact_phone" name="contact_phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website" name="website" placeholder="https://...">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Business Details</h3>
+                    
+                    <div class="form-group full-width">
+                        <label for="description">Business Description *</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                        <p class="field-help">Describe your business, services, and what makes you unique (max 500 characters)</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="years_in_business">Years in Business</label>
+                            <input type="number" id="years_in_business" name="years_in_business" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="avg_weddings_per_year">Average Weddings Per Year</label>
+                            <input type="number" id="avg_weddings_per_year" name="avg_weddings_per_year" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Price Range *</label>
+                        <div class="price-range-selector">
+                            <div class="price-option">
+                                <input type="radio" id="price_1" name="price_range" value="$">
+                                <label for="price_1">$</label>
+                            </div>
+                            <div class="price-option">
+                                <input type="radio" id="price_2" name="price_range" value="$$">
+                                <label for="price_2">$$</label>
+                            </div>
+                            <div class="price-option">
+                                <input type="radio" id="price_3" name="price_range" value="$$$">
+                                <label for="price_3">$$$</label>
+                            </div>
+                            <div class="price-option">
+                                <input type="radio" id="price_4" name="price_range" value="$$$$">
+                                <label for="price_4">$$$$</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="starting_price">Starting Price (in $) *</label>
+                        <input type="number" id="starting_price" name="starting_price" min="0" required>
+                        <p class="field-help">The minimum cost for your services</p>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="services">Services Offered *</label>
+                        <textarea id="services" name="services" rows="3" required></textarea>
+                        <p class="field-help">List your main services, separated by commas</p>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Location & Coverage</h3>
+                    
+                    <div class="form-group full-width">
+                        <label for="address">Business Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zip">ZIP Code *</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travel_radius">Travel Radius (miles)</label>
+                            <input type="number" id="travel_radius" name="travel_radius" min="0">
+                            <p class="field-help">How far you're willing to travel for events</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="map-preview">Location Preview</label>
+                        <div id="map-preview" class="map-preview"></div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Portfolio & Media</h3>
+                    
+                    <div class="form-group full-width">
+                        <label for="profile_image">Profile Image *</label>
+                        <input type="file" id="profile_image" name="profile_image" accept="image/*" required>
+                        <p class="field-help">This will be your main profile image (recommended size: 800x600px)</p>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="gallery_images">Gallery Images (up to 5)</label>
+                        <input type="file" id="gallery_images" name="gallery_images" accept="image/*" multiple>
+                        <p class="field-help">Showcase your best work (recommended size: 1200x800px)</p>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="video_url">Video URL</label>
+                        <input type="url" id="video_url" name="video_url" placeholder="https://youtube.com/... or https://vimeo.com/...">
+                        <p class="field-help">Link to a YouTube or Vimeo video showcasing your work</p>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Social Media & Reviews</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="instagram">Instagram</label>
+                            <div class="social-input">
+                                <span class="social-prefix">instagram.com/</span>
+                                <input type="text" id="instagram" name="instagram" placeholder="username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="facebook">Facebook</label>
+                            <div class="social-input">
+                                <span class="social-prefix">facebook.com/</span>
+                                <input type="text" id="facebook" name="facebook" placeholder="page">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pinterest">Pinterest</label>
+                            <div class="social-input">
+                                <span class="social-prefix">pinterest.com/</span>
+                                <input type="text" id="pinterest" name="pinterest" placeholder="username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tiktok">TikTok</label>
+                            <div class="social-input">
+                                <span class="social-prefix">tiktok.com/@</span>
+                                <input type="text" id="tiktok" name="tiktok" placeholder="username">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Terms & Submission</h3>
+                    
+                    <div class="form-group full-width">
+                        <div class="terms-agreement">
+                            <input type="checkbox" id="terms_agreement" name="terms_agreement" required>
+                            <label for="terms_agreement">I agree to the <a href="#" class="terms-link">Terms and Conditions</a> *</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="altare-btn">Submit Registration</button>
+                    </div>
+                </div>
+                
+                <div id="registration-status" class="registration-status"></div>
+            </form>
+            
+            <div class="registration-links">
+                <h3>Registration Links</h3>
+                <p>Share these links with vendors to have them register on Altare:</p>
+                
+                <div class="category-links">
+                    <div class="category-link-item">
+                        <h4>Venues</h4>
+                        <div class="link-container">
+                            <input type="text" readonly value="https://altare.com/vendor-register.html?category=venue" id="venue-link">
+                            <button class="copy-link-btn" data-link="venue-link"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-link-item">
+                        <h4>Photographers</h4>
+                        <div class="link-container">
+                            <input type="text" readonly value="https://altare.com/vendor-register.html?category=photography" id="photography-link">
+                            <button class="copy-link-btn" data-link="photography-link"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-link-item">
+                        <h4>Caterers</h4>
+                        <div class="link-container">
+                            <input type="text" readonly value="https://altare.com/vendor-register.html?category=catering" id="catering-link">
+                            <button class="copy-link-btn" data-link="catering-link"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-link-item">
+                        <h4>Florists</h4>
+                        <div class="link-container">
+                            <input type="text" readonly value="https://altare.com/vendor-register.html?category=florist" id="florist-link">
+                            <button class="copy-link-btn" data-link="florist-link"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-link-item">
+                        <h4>All Categories</h4>
+                        <div class="link-container">
+                            <input type="text" readonly value="https://altare.com/vendor-register.html" id="all-link">
+                            <button class="copy-link-btn" data-link="all-link"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo">
+                    <p>Your Alternative Way to the Altar</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#planning">Planning</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="vendors.html">Vendors</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@altare.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Altare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

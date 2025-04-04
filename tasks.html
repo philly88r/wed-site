@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Task Manager - Wedding Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tasks.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Wedding Planner</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#planning">Planning</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#vendors">Vendors</a></li>
+                    <li><a href="index.html#budget">Budget</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="task-manager">
+        <div class="container">
+            <h1>Wedding Task Manager</h1>
+            <p>Keep track of all your wedding planning tasks in one place</p>
+            
+            <div class="task-dashboard">
+                <div class="task-sidebar">
+                    <div class="task-categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li class="active"><a href="#all">All Tasks</a></li>
+                            <li><a href="#venue">Venue & Catering</a></li>
+                            <li><a href="#attire">Attire & Beauty</a></li>
+                            <li><a href="#vendors">Vendors</a></li>
+                            <li><a href="#guests">Guest Management</a></li>
+                            <li><a href="#ceremony">Ceremony & Reception</a></li>
+                            <li><a href="#honeymoon">Honeymoon</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="task-timeline">
+                        <h3>Timeline</h3>
+                        <ul>
+                            <li><a href="#12months">12+ Months</a></li>
+                            <li><a href="#9months">9-12 Months</a></li>
+                            <li><a href="#6months">6-9 Months</a></li>
+                            <li><a href="#3months">3-6 Months</a></li>
+                            <li><a href="#1month">1-3 Months</a></li>
+                            <li><a href="#week">1 Week</a></li>
+                            <li><a href="#day">Wedding Day</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="task-content">
+                    <div class="task-header">
+                        <div class="task-search">
+                            <input type="text" placeholder="Search tasks...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="task-filter">
+                            <select>
+                                <option value="all">All Tasks</option>
+                                <option value="completed">Completed</option>
+                                <option value="pending">Pending</option>
+                                <option value="overdue">Overdue</option>
+                            </select>
+                        </div>
+                        <div class="task-add">
+                            <button class="btn add-task-btn">Add New Task</button>
+                        </div>
+                    </div>
+                    
+                    <div class="task-list-header">
+                        <div class="task-checkbox-header"></div>
+                        <div class="task-name-header">Task</div>
+                        <div class="task-category-header">Category</div>
+                        <div class="task-due-header">Due Date</div>
+                        <div class="task-priority-header">Priority</div>
+                        <div class="task-actions-header">Actions</div>
+                    </div>
+                    
+                    <div class="task-list">
+                        <!-- 12+ Months Tasks -->
+                        <div class="task-item" data-category="venue" data-timeline="12months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Set wedding date</div>
+                            <div class="task-category">Venue & Catering</div>
+                            <div class="task-due">12 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="venue" data-timeline="12months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book ceremony venue</div>
+                            <div class="task-category">Venue & Catering</div>
+                            <div class="task-due">12 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="venue" data-timeline="12months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book reception venue</div>
+                            <div class="task-category">Venue & Catering</div>
+                            <div class="task-due">12 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="vendors" data-timeline="12months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Research photographers</div>
+                            <div class="task-category">Vendors</div>
+                            <div class="task-due">12 months before</div>
+                            <div class="task-priority medium">Medium</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- 9-12 Months Tasks -->
+                        <div class="task-item" data-category="attire" data-timeline="9months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Shop for wedding dress</div>
+                            <div class="task-category">Attire & Beauty</div>
+                            <div class="task-due">9 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="vendors" data-timeline="9months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book photographer</div>
+                            <div class="task-category">Vendors</div>
+                            <div class="task-due">9 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="vendors" data-timeline="9months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book videographer</div>
+                            <div class="task-category">Vendors</div>
+                            <div class="task-due">9 months before</div>
+                            <div class="task-priority medium">Medium</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- 6-9 Months Tasks -->
+                        <div class="task-item" data-category="vendors" data-timeline="6months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book florist</div>
+                            <div class="task-category">Vendors</div>
+                            <div class="task-due">6 months before</div>
+                            <div class="task-priority medium">Medium</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="vendors" data-timeline="6months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book DJ or band</div>
+                            <div class="task-category">Vendors</div>
+                            <div class="task-due">6 months before</div>
+                            <div class="task-priority medium">Medium</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="attire" data-timeline="6months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Order wedding dress</div>
+                            <div class="task-category">Attire & Beauty</div>
+                            <div class="task-due">6 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- 3-6 Months Tasks -->
+                        <div class="task-item" data-category="guests" data-timeline="3months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Send save-the-dates</div>
+                            <div class="task-category">Guest Management</div>
+                            <div class="task-due">6 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="honeymoon" data-timeline="3months">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Book honeymoon</div>
+                            <div class="task-category">Honeymoon</div>
+                            <div class="task-due">4 months before</div>
+                            <div class="task-priority medium">Medium</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- 1-3 Months Tasks -->
+                        <div class="task-item" data-category="guests" data-timeline="1month">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Send invitations</div>
+                            <div class="task-category">Guest Management</div>
+                            <div class="task-due">2 months before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="attire" data-timeline="1month">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Final dress fitting</div>
+                            <div class="task-category">Attire & Beauty</div>
+                            <div class="task-due">1 month before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- 1 Week Tasks -->
+                        <div class="task-item" data-category="ceremony" data-timeline="week">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Confirm all vendors</div>
+                            <div class="task-category">Ceremony & Reception</div>
+                            <div class="task-due">1 week before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item" data-category="ceremony" data-timeline="week">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Final guest count to caterer</div>
+                            <div class="task-category">Ceremony & Reception</div>
+                            <div class="task-due">1 week before</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Wedding Day Tasks -->
+                        <div class="task-item" data-category="ceremony" data-timeline="day">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-name">Give wedding rings to best man</div>
+                            <div class="task-category">Ceremony & Reception</div>
+                            <div class="task-due">Wedding day</div>
+                            <div class="task-priority high">High</div>
+                            <div class="task-actions">
+                                <button class="edit-task"><i class="fas fa-edit"></i></button>
+                                <button class="delete-task"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Task Form Modal (hidden by default) -->
+            <div class="task-modal" id="task-modal">
+                <div class="task-modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add New Task</h2>
+                    <form id="task-form">
+                        <div class="form-group">
+                            <label for="task-name">Task Name</label>
+                            <input type="text" id="task-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-category">Category</label>
+                            <select id="task-category" required>
+                                <option value="">Select a category</option>
+                                <option value="venue">Venue & Catering</option>
+                                <option value="attire">Attire & Beauty</option>
+                                <option value="vendors">Vendors</option>
+                                <option value="guests">Guest Management</option>
+                                <option value="ceremony">Ceremony & Reception</option>
+                                <option value="honeymoon">Honeymoon</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-due">Due Date</label>
+                            <input type="date" id="task-due" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-priority">Priority</label>
+                            <select id="task-priority" required>
+                                <option value="">Select priority</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-notes">Notes</label>
+                            <textarea id="task-notes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Save Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wedding Planner</h2>
+                    <p>Your complete wedding planning solution</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#planning">Planning</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#vendors">Vendors</a></li>
+                        <li><a href="index.html#budget">Budget</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wedding Planner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tasks.js"></script>
+</body>
+</html>

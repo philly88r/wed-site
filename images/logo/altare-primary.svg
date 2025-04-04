@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text {
+      font-family: 'Giaza', serif;
+      font-size: 60px;
+      fill: #0A4697;
+    }
+  </style>
+  <text x="10" y="60" class="logo-text">Altare</text>
+</svg>

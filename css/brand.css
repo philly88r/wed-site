@@ -1,0 +1,167 @@
+/* Altare Brand Guidelines CSS */
+
+/* Font Declarations */
+@font-face {
+    font-family: 'Giaza';
+    src: url('../fonts/myfonts_order_6394679525546/Giaza.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Brand Colors */
+:root {
+    --bolden: #0A4697;      /* Primary Blue */
+    --firecracker: #F3471F; /* Accent Orange/Red */
+    --blanc: #FBFBF7;       /* White/Off-white */
+    --rose: #F2C8C1;        /* Light Pink */
+    --nude: #96B0D7;        /* Light Blue */
+    --pia: #FDE7E3;         /* Pale Pink */
+    --blush: #FFE8E4;       /* Light Peach */
+}
+
+/* Typography Styles */
+.headline {
+    font-family: 'Giaza', serif;
+    font-size: 72px;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+}
+
+.subheading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+
+.body-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.button-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* Brand-specific Styles */
+.altare-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.altare-logo-small {
+    min-width: 100px;
+    height: auto;
+}
+
+.altare-bg-primary {
+    background-color: var(--bolden);
+    color: white;
+}
+
+.altare-bg-accent {
+    background-color: var(--firecracker);
+    color: white;
+}
+
+.altare-bg-light {
+    background-color: var(--blanc);
+    color: var(--bolden);
+}
+
+.altare-bg-pink {
+    background-color: var(--rose);
+    color: var(--bolden);
+}
+
+.altare-bg-blue {
+    background-color: var(--nude);
+    color: var(--bolden);
+}
+
+.altare-text-primary {
+    color: var(--bolden);
+}
+
+.altare-text-accent {
+    color: var(--firecracker);
+}
+
+/* Brand-specific Button Styles */
+.altare-btn {
+    display: inline-block;
+    background-color: var(--bolden);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.altare-btn:hover {
+    background-color: var(--firecracker);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(10, 70, 151, 0.2);
+}
+
+.altare-btn-accent {
+    background-color: var(--firecracker);
+}
+
+.altare-btn-accent:hover {
+    background-color: var(--bolden);
+}
+
+.altare-btn-outline {
+    background-color: transparent;
+    color: var(--bolden);
+    border: 2px solid var(--bolden);
+}
+
+.altare-btn-outline:hover {
+    background-color: var(--bolden);
+    color: white;
+}
+
+/* Utility Classes */
+.altare-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.altare-section {
+    padding: 80px 0;
+}
+
+.altare-text-center {
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 48px;
+    }
+    
+    .subheading {
+        font-size: 16px;
+    }
+    
+    .body-text {
+        font-size: 16px;
+    }
+}

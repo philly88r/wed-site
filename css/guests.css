@@ -1,0 +1,432 @@
+/* Guest Manager Styles */
+.guest-manager {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.guest-manager h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ff6b6b;
+}
+
+.guest-manager > .container > p {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guest-dashboard {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Guest Sidebar */
+.guest-sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-right: 1px solid #eee;
+}
+
+.guest-summary, .guest-groups, .guest-export {
+    margin-bottom: 30px;
+}
+
+.guest-summary h3, .guest-groups h3, .guest-export h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.summary-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.summary-value {
+    font-weight: 600;
+    color: #333;
+}
+
+.guest-groups ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.guest-groups ul li {
+    margin-bottom: 10px;
+}
+
+.guest-groups ul li a {
+    color: #666;
+    font-size: 15px;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.guest-groups ul li a:hover, .guest-groups ul li.active a {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.guest-groups ul li.active a {
+    font-weight: 500;
+}
+
+.add-group-btn, .export-btn, .print-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Guest Content */
+.guest-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.guest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.guest-search {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.guest-search input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.guest-search button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.guest-filter select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+
+.guest-list-header {
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.guest-name-header {
+    width: 15%;
+}
+
+.guest-email-header {
+    width: 20%;
+}
+
+.guest-phone-header {
+    width: 15%;
+}
+
+.guest-group-header {
+    width: 10%;
+}
+
+.guest-rsvp-header {
+    width: 15%;
+}
+
+.guest-meal-header {
+    width: 15%;
+}
+
+.guest-actions-header {
+    width: 10%;
+    text-align: center;
+}
+
+.guest-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.guest-item:hover {
+    background-color: #f9f9f9;
+}
+
+.guest-name {
+    width: 15%;
+    font-weight: 500;
+}
+
+.guest-email {
+    width: 20%;
+    color: #666;
+    font-size: 14px;
+}
+
+.guest-phone {
+    width: 15%;
+    color: #666;
+    font-size: 14px;
+}
+
+.guest-group {
+    width: 10%;
+    color: #666;
+}
+
+.guest-rsvp {
+    width: 15%;
+}
+
+.guest-meal {
+    width: 15%;
+}
+
+.rsvp-select, .meal-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.guest-actions {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.guest-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.edit-guest:hover {
+    color: #2196f3;
+}
+
+.delete-guest:hover {
+    color: #e53935;
+}
+
+/* Guest Modal */
+.guest-modal, .group-modal {
+    display: none;
+    position: fixed;
+    z-index: 1100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.guest-modal-content, .group-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.close-modal, .close-group-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-modal:hover, .close-group-modal:hover {
+    color: #333;
+}
+
+#guest-form .form-group, #group-form .form-group {
+    margin-bottom: 20px;
+}
+
+#guest-form label, #group-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#guest-form input,
+#guest-form select,
+#guest-form textarea,
+#group-form input,
+#group-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#guest-form input:focus,
+#guest-form select:focus,
+#guest-form textarea:focus,
+#group-form input:focus,
+#group-form textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+#guest-form button, #group-form button {
+    width: 100%;
+    padding: 12px;
+}
+
+/* RSVP Status Colors */
+.rsvp-select option[value="attending"] {
+    background-color: #e8f5e9;
+}
+
+.rsvp-select option[value="declined"] {
+    background-color: #ffebee;
+}
+
+.rsvp-select option[value="awaiting"] {
+    background-color: #fff8e1;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .guest-dashboard {
+        flex-direction: column;
+    }
+    
+    .guest-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .guest-summary {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .guest-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .guest-search, .guest-filter, .guest-add {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .guest-list-header {
+        display: none;
+    }
+    
+    .guest-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .guest-name, .guest-email, .guest-phone, .guest-group, .guest-rsvp, .guest-meal, .guest-actions {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .guest-actions {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .guest-actions button {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    
+    .guest-name {
+        font-size: 18px;
+    }
+    
+    .guest-email:before {
+        content: "Email: ";
+        font-weight: 500;
+    }
+    
+    .guest-phone:before {
+        content: "Phone: ";
+        font-weight: 500;
+    }
+    
+    .guest-group:before {
+        content: "Group: ";
+        font-weight: 500;
+    }
+    
+    .guest-rsvp:before {
+        content: "RSVP: ";
+        font-weight: 500;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .guest-meal:before {
+        content: "Meal: ";
+        font-weight: 500;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .guest-summary {
+        grid-template-columns: 1fr;
+    }
+}

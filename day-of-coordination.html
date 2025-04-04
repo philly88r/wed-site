@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-of Wedding Coordination - Altare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/elegant-hero.css">
+    <link rel="stylesheet" href="css/about-section.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Day-of Coordination Page Styles */
+        .coordination-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/wedding-coordination.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .coordination-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .coordination-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .coordination-section {
+            padding: 80px 0;
+        }
+
+        .coordination-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .coordination-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .coordination-intro h2 {
+            font-size: 2.5rem;
+            color: var(--primary-main);
+            margin-bottom: 20px;
+        }
+
+        .coordination-intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-main);
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .process-section {
+            background-color: var(--accent-blanc);
+            padding: 80px 0;
+        }
+
+        .process-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-main);
+            margin-bottom: 50px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .process-step {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--primary-main);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .coordinators-section {
+            padding: 80px 0;
+        }
+
+        .coordinators-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-main);
+            margin-bottom: 50px;
+        }
+
+        .coordinators-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .coordinators-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .coordinators-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .coordinator-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .coordinator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .coordinator-image {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .coordinator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .coordinator-card:hover .coordinator-image img {
+            transform: scale(1.05);
+        }
+
+        .coordinator-info {
+            padding: 25px;
+        }
+
+        .coordinator-name {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .coordinator-bio {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background-color: var(--primary-main);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-main);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-blanc);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Horizontal Navigation -->
+    <nav class="horizontal-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#planning"><i class="fas fa-tasks"></i> Planning</a></li>
+                <li><a href="vendors.html"><i class="fas fa-store"></i> Vendors</a></li>
+                <li><a href="index.html#budget"><i class="fas fa-dollar-sign"></i> Budget</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="tutorials.html"><i class="fas fa-book"></i> Tutorials</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="coordination-hero">
+        <div class="container">
+            <h1>Day-of Wedding Coordination</h1>
+            <p>Let us handle the details on your big day while you focus on creating memories.</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="coordination-section">
+        <div class="coordination-container">
+            <div class="coordination-intro">
+                <h2>How We'll Support You</h2>
+                <p>Our experienced coordinators will ensure your wedding day runs smoothly, managing all the details so you can be fully present and enjoy every moment of your special day.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="service-title">Professional Coordination</h3>
+                    <p class="service-description">Our experienced coordinators will manage your wedding day from start to finish, ensuring everything runs according to plan and handling any unexpected issues that arise.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">Vendor Management</h3>
+                    <p class="service-description">We'll coordinate with all your vendors before and during the event, confirming arrival times, managing setup, and ensuring everyone knows their responsibilities.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="service-title">Timeline Management</h3>
+                    <p class="service-description">We'll create a detailed schedule for your wedding day and ensure everything happens on time, from the ceremony to the last dance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="service-title">Setup & Breakdown</h3>
+                    <p class="service-description">We'll oversee the setup of your ceremony and reception spaces, and ensure everything is properly packed up at the end of the night.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3 class="service-title">Emergency Kit</h3>
+                    <p class="service-description">We come prepared with a comprehensive emergency kit to handle any last-minute issues, from wardrobe malfunctions to headaches.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="service-title">Peace of Mind</h3>
+                    <p class="service-description">With our team handling the logistics, you and your loved ones can relax and fully enjoy your wedding day without stress or distractions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="coordination-container">
+            <h2 class="process-title">Our Coordination Process</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Consultation</h3>
+                        <p>We'll meet to discuss your vision, needs, and expectations for your wedding day. This helps us understand how we can best support you.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Vendor Communication</h3>
+                        <p>We'll reach out to all your vendors to introduce ourselves, confirm details, and establish a point of contact for the wedding day.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Timeline Creation</h3>
+                        <p>We'll develop a detailed timeline for your wedding day, ensuring everything flows smoothly from start to finish.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Final Walkthrough</h3>
+                        <p>About 1-2 weeks before your wedding, we'll conduct a final walkthrough at your venue to finalize all details and logistics.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Rehearsal Coordination</h3>
+                        <p>We'll direct your wedding rehearsal, ensuring everyone knows their roles and responsibilities for the big day.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Wedding Day Management</h3>
+                        <p>On your wedding day, we'll be there from start to finish, managing all details and handling any issues that arise so you can focus on enjoying your day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coordinators Section -->
+    <section class="coordinators-section">
+        <div class="coordination-container">
+            <h2 class="coordinators-title">Meet Our Coordinators</h2>
+
+            <div class="coordinators-grid">
+                <div class="coordinator-card">
+                    <div class="coordinator-image">
+                        <img src="images/coordinators/christina.png" alt="Christina Thavis">
+                    </div>
+                    <div class="coordinator-info">
+                        <h3 class="coordinator-name">Christina Thavis</h3>
+                        <p class="coordinator-bio">Christina has been bringing timelines and floor plans to life for over 5 years. She thrives on bringing order to chaos and ensuring every detail is covered. When she's not orchestrating dream weddings, Christina is baking (and eating) desserts, propagating her plants, and reading.</p>
+                    </div>
+                </div>
+
+                <div class="coordinator-card">
+                    <div class="coordinator-image">
+                        <img src="images/coordinators/ani.png" alt="Ani Chamesian">
+                    </div>
+                    <div class="coordinator-info">
+                        <h3 class="coordinator-name">Ani Chamesian</h3>
+                        <p class="coordinator-bio">Ani is a creative and compassionate June 2024 bride made into a day-of-coordinator and floral director. She loves making engaged couples' dream day come true, so they truly can soak it all in. Outside of weddings, she enjoys cooking/eating middle eastern food and attending hot yoga.</p>
+                    </div>
+                </div>
+
+                <div class="coordinator-card">
+                    <div class="coordinator-image">
+                        <img src="images/coordinators/krista.png" alt="Krista Jakubiak">
+                    </div>
+                    <div class="coordinator-info">
+                        <h3 class="coordinator-name">Krista Jakubiak</h3>
+                        <p class="coordinator-bio">Krista is a planner, problem-solver, and party-starter! She has planned everything from luxury destination weddings in Greece and Mexico to corporate galas high above NYC at One World Observatory. Serving clients across NY, NJ, and CT, Krista ensures every wedding runs seamlessly. When not planning weddings, Krista loves exploring Long Island or relaxing in the park with her Aussie Shepherd and Corgi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="coordination-container">
+            <h2 class="cta-title">Ready to Secure Your Wedding Day Coordinator?</h2>
+            <p class="cta-description">Our day-of coordination package is $3,500. Book now to ensure your wedding day is stress-free and perfectly executed.</p>
+            <a href="index.html#contact" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo/altare-white.svg" alt="Altare" class="altare-logo-small">
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Planning</h4>
+                        <ul>
+                            <li><a href="tasks.html">Tasks</a></li>
+                            <li><a href="guests.html">Guest List</a></li>
+                            <li><a href="budget.html">Budget</a></li>
+                            <li><a href="vendors.html">Vendors</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="tutorials.html">Tutorials</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Altare. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

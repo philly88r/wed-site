@@ -1,0 +1,263 @@
+/* Tilted Scroll Component Styles */
+
+.tilted-scroll-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.tilted-card-stack {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tilted-card {
+  position: absolute;
+  width: 500px;
+  height: 220px;
+  transform: skew(0, -8deg);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  border: 2px solid rgba(150, 176, 215, 0.3);
+  background-color: rgba(251, 251, 247, 0.9);
+  padding: 30px 40px;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 30px rgba(10, 70, 151, 0.1);
+  opacity: 0;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+}
+
+.tilted-card.active {
+  opacity: 1;
+  z-index: 3;
+  transform: translate(-50%, -50%) skew(0, -8deg);
+}
+
+.tilted-card.prev {
+  opacity: 0.7;
+  z-index: 2;
+  transform: translate(-80%, -50%) skew(0, -8deg) scale(0.9);
+}
+
+.tilted-card.next {
+  opacity: 0.7;
+  z-index: 2;
+  transform: translate(-20%, -50%) skew(0, -8deg) scale(0.9);
+}
+
+.tilted-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(251, 251, 247, 1);
+  box-shadow: 0 15px 40px rgba(10, 70, 151, 0.2);
+}
+
+.tilted-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.tilted-card-content > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tilted-icon-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-main);
+  margin-right: 16px;
+}
+
+.tilted-icon-container i {
+  color: white;
+  font-size: 24px;
+}
+
+.tilted-card-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--primary-main);
+  margin: 0;
+}
+
+.tilted-card-description {
+  font-size: 20px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.tilted-card-date {
+  color: rgba(10, 70, 151, 0.6);
+  font-size: 14px;
+  margin: 0;
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  outline: 1px solid rgba(150, 176, 215, 0.3);
+  background-blend-mode: overlay;
+  background-color: rgba(251, 251, 247, 0.5);
+  left: 0;
+  top: 0;
+  transition: opacity 0.7s ease;
+}
+
+.tilted-card:hover .tilted-card-overlay {
+  opacity: 0;
+}
+
+.tilted-nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.tilted-nav-button {
+  background-color: var(--primary-main);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(10, 70, 151, 0.2);
+}
+
+.tilted-nav-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(10, 70, 151, 0.3);
+}
+
+.tilted-nav-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(10, 70, 151, 0.2);
+}
+
+.tilted-nav-button.play-pause {
+  background-color: var(--accent-blush);
+}
+
+.tilted-nav-button.play-pause:hover {
+  background-color: var(--accent-rose);
+}
+
+/* Card colors from brand */
+[data-id="1"] .tilted-icon-container {
+  background-color: var(--primary-main);
+}
+
+[data-id="1"] .tilted-card-title {
+  color: var(--primary-main);
+}
+
+[data-id="2"] .tilted-icon-container {
+  background-color: var(--accent-blush);
+}
+
+[data-id="2"] .tilted-card-title {
+  color: var(--accent-blush);
+}
+
+[data-id="3"] .tilted-icon-container {
+  background-color: var(--accent-nude);
+}
+
+[data-id="3"] .tilted-card-title {
+  color: var(--primary-main);
+}
+
+[data-id="4"] .tilted-icon-container {
+  background-color: var(--primary-light);
+}
+
+[data-id="4"] .tilted-card-title {
+  color: var(--primary-light);
+}
+
+[data-id="5"] .tilted-icon-container {
+  background-color: var(--accent-pia);
+}
+
+[data-id="5"] .tilted-card-title {
+  color: var(--accent-pia);
+}
+
+[data-id="6"] .tilted-icon-container {
+  background-color: var(--accent-nude);
+}
+
+[data-id="6"] .tilted-card-title {
+  color: var(--primary-main);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .tilted-card {
+    width: 360px;
+    height: 160px;
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tilted-card {
+    width: 320px;
+    height: 160px;
+    padding: 16px 20px;
+  }
+  
+  .tilted-card-title {
+    font-size: 20px;
+  }
+  
+  .tilted-card-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tilted-card {
+    width: 280px;
+  }
+  
+  .tilted-card.prev {
+    transform: translate(-90%, -50%) skew(0, -8deg) scale(0.8);
+  }
+  
+  .tilted-card.next {
+    transform: translate(-10%, -50%) skew(0, -8deg) scale(0.8);
+  }
+}

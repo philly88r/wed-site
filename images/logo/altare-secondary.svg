@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="300" height="100" rx="10" fill="#F2C8C1"/>
+  <style>
+    .logo-text {
+      font-family: 'Giaza', serif;
+      font-size: 50px;
+      fill: #F3471F;
+    }
+    .tagline {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      fill: #0A4697;
+      text-anchor: middle;
+    }
+  </style>
+  <text x="150" y="60" class="logo-text" text-anchor="middle">Alt are</text>
+  <text x="150" y="85" class="tagline">YOUR ALTERNATIVE WAY TO GET TO THE ALTAR</text>
+</svg>

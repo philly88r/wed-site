@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List Manager - Wedding Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/guests.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Wedding Planner</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#planning">Planning</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#vendors">Vendors</a></li>
+                    <li><a href="index.html#budget">Budget</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="guest-manager">
+        <div class="container">
+            <h1>Guest List Manager</h1>
+            <p>Keep track of all your wedding guests, RSVPs, and seating arrangements</p>
+            
+            <div class="guest-dashboard">
+                <div class="guest-sidebar">
+                    <div class="guest-summary">
+                        <h3>Guest Summary</h3>
+                        <div class="summary-item">
+                            <div class="summary-label">Total Invited</div>
+                            <div class="summary-value" id="total-invited">150</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Attending</div>
+                            <div class="summary-value" id="total-attending">0</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Declined</div>
+                            <div class="summary-value" id="total-declined">0</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Awaiting RSVP</div>
+                            <div class="summary-value" id="total-awaiting">150</div>
+                        </div>
+                    </div>
+                    
+                    <div class="guest-groups">
+                        <h3>Guest Groups</h3>
+                        <ul>
+                            <li class="active"><a href="#all">All Guests</a></li>
+                            <li><a href="#family">Family</a></li>
+                            <li><a href="#friends">Friends</a></li>
+                            <li><a href="#coworkers">Coworkers</a></li>
+                            <li><a href="#plus-ones">Plus Ones</a></li>
+                        </ul>
+                        <button class="btn add-group-btn">Add Group</button>
+                    </div>
+                    
+                    <div class="guest-export">
+                        <h3>Export Options</h3>
+                        <button class="btn export-btn">Export to CSV</button>
+                        <button class="btn print-btn">Print Guest List</button>
+                    </div>
+                </div>
+                
+                <div class="guest-content">
+                    <div class="guest-header">
+                        <div class="guest-search">
+                            <input type="text" placeholder="Search guests...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="guest-filter">
+                            <select>
+                                <option value="all">All Guests</option>
+                                <option value="attending">Attending</option>
+                                <option value="declined">Declined</option>
+                                <option value="awaiting">Awaiting RSVP</option>
+                            </select>
+                        </div>
+                        <div class="guest-add">
+                            <button class="btn add-guest-btn">Add Guest</button>
+                        </div>
+                    </div>
+                    
+                    <div class="guest-list-header">
+                        <div class="guest-name-header">Guest Name</div>
+                        <div class="guest-email-header">Email</div>
+                        <div class="guest-phone-header">Phone</div>
+                        <div class="guest-group-header">Group</div>
+                        <div class="guest-rsvp-header">RSVP Status</div>
+                        <div class="guest-meal-header">Meal Choice</div>
+                        <div class="guest-actions-header">Actions</div>
+                    </div>
+                    
+                    <div class="guest-list">
+                        <!-- Sample Guest Items -->
+                        <div class="guest-item" data-group="family">
+                            <div class="guest-name">John Smith</div>
+                            <div class="guest-email">john.smith@example.com</div>
+                            <div class="guest-phone">555-123-4567</div>
+                            <div class="guest-group">Family</div>
+                            <div class="guest-rsvp">
+                                <select class="rsvp-select">
+                                    <option value="awaiting" selected>Awaiting</option>
+                                    <option value="attending">Attending</option>
+                                    <option value="declined">Declined</option>
+                                </select>
+                            </div>
+                            <div class="guest-meal">
+                                <select class="meal-select">
+                                    <option value="" selected>Not Selected</option>
+                                    <option value="beef">Beef</option>
+                                    <option value="chicken">Chicken</option>
+                                    <option value="fish">Fish</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="guest-actions">
+                                <button class="edit-guest"><i class="fas fa-edit"></i></button>
+                                <button class="delete-guest"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="guest-item" data-group="family">
+                            <div class="guest-name">Jane Smith</div>
+                            <div class="guest-email">jane.smith@example.com</div>
+                            <div class="guest-phone">555-123-4568</div>
+                            <div class="guest-group">Family</div>
+                            <div class="guest-rsvp">
+                                <select class="rsvp-select">
+                                    <option value="awaiting" selected>Awaiting</option>
+                                    <option value="attending">Attending</option>
+                                    <option value="declined">Declined</option>
+                                </select>
+                            </div>
+                            <div class="guest-meal">
+                                <select class="meal-select">
+                                    <option value="" selected>Not Selected</option>
+                                    <option value="beef">Beef</option>
+                                    <option value="chicken">Chicken</option>
+                                    <option value="fish">Fish</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="guest-actions">
+                                <button class="edit-guest"><i class="fas fa-edit"></i></button>
+                                <button class="delete-guest"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="guest-item" data-group="friends">
+                            <div class="guest-name">Michael Johnson</div>
+                            <div class="guest-email">michael.j@example.com</div>
+                            <div class="guest-phone">555-987-6543</div>
+                            <div class="guest-group">Friends</div>
+                            <div class="guest-rsvp">
+                                <select class="rsvp-select">
+                                    <option value="awaiting" selected>Awaiting</option>
+                                    <option value="attending">Attending</option>
+                                    <option value="declined">Declined</option>
+                                </select>
+                            </div>
+                            <div class="guest-meal">
+                                <select class="meal-select">
+                                    <option value="" selected>Not Selected</option>
+                                    <option value="beef">Beef</option>
+                                    <option value="chicken">Chicken</option>
+                                    <option value="fish">Fish</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="guest-actions">
+                                <button class="edit-guest"><i class="fas fa-edit"></i></button>
+                                <button class="delete-guest"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="guest-item" data-group="friends">
+                            <div class="guest-name">Emily Davis</div>
+                            <div class="guest-email">emily.d@example.com</div>
+                            <div class="guest-phone">555-456-7890</div>
+                            <div class="guest-group">Friends</div>
+                            <div class="guest-rsvp">
+                                <select class="rsvp-select">
+                                    <option value="awaiting" selected>Awaiting</option>
+                                    <option value="attending">Attending</option>
+                                    <option value="declined">Declined</option>
+                                </select>
+                            </div>
+                            <div class="guest-meal">
+                                <select class="meal-select">
+                                    <option value="" selected>Not Selected</option>
+                                    <option value="beef">Beef</option>
+                                    <option value="chicken">Chicken</option>
+                                    <option value="fish">Fish</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="guest-actions">
+                                <button class="edit-guest"><i class="fas fa-edit"></i></button>
+                                <button class="delete-guest"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="guest-item" data-group="coworkers">
+                            <div class="guest-name">Robert Wilson</div>
+                            <div class="guest-email">robert.w@example.com</div>
+                            <div class="guest-phone">555-789-0123</div>
+                            <div class="guest-group">Coworkers</div>
+                            <div class="guest-rsvp">
+                                <select class="rsvp-select">
+                                    <option value="awaiting" selected>Awaiting</option>
+                                    <option value="attending">Attending</option>
+                                    <option value="declined">Declined</option>
+                                </select>
+                            </div>
+                            <div class="guest-meal">
+                                <select class="meal-select">
+                                    <option value="" selected>Not Selected</option>
+                                    <option value="beef">Beef</option>
+                                    <option value="chicken">Chicken</option>
+                                    <option value="fish">Fish</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="guest-actions">
+                                <button class="edit-guest"><i class="fas fa-edit"></i></button>
+                                <button class="delete-guest"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guest Form Modal (hidden by default) -->
+            <div class="guest-modal" id="guest-modal">
+                <div class="guest-modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add New Guest</h2>
+                    <form id="guest-form">
+                        <div class="form-group">
+                            <label for="guest-name">Full Name</label>
+                            <input type="text" id="guest-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-email">Email</label>
+                            <input type="email" id="guest-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-phone">Phone</label>
+                            <input type="tel" id="guest-phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-group">Group</label>
+                            <select id="guest-group" required>
+                                <option value="">Select a group</option>
+                                <option value="family">Family</option>
+                                <option value="friends">Friends</option>
+                                <option value="coworkers">Coworkers</option>
+                                <option value="plus-ones">Plus Ones</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-rsvp">RSVP Status</label>
+                            <select id="guest-rsvp">
+                                <option value="awaiting" selected>Awaiting</option>
+                                <option value="attending">Attending</option>
+                                <option value="declined">Declined</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-meal">Meal Preference</label>
+                            <select id="guest-meal">
+                                <option value="" selected>Not Selected</option>
+                                <option value="beef">Beef</option>
+                                <option value="chicken">Chicken</option>
+                                <option value="fish">Fish</option>
+                                <option value="vegetarian">Vegetarian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest-notes">Notes</label>
+                            <textarea id="guest-notes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Save Guest</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Group Form Modal (hidden by default) -->
+            <div class="group-modal" id="group-modal">
+                <div class="group-modal-content">
+                    <span class="close-group-modal">&times;</span>
+                    <h2>Add New Group</h2>
+                    <form id="group-form">
+                        <div class="form-group">
+                            <label for="group-name">Group Name</label>
+                            <input type="text" id="group-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="group-description">Description</label>
+                            <textarea id="group-description" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Save Group</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wedding Planner</h2>
+                    <p>Your complete wedding planning solution</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#planning">Planning</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#vendors">Vendors</a></li>
+                        <li><a href="index.html#budget">Budget</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wedding Planner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/guests.js"></script>
+</body>
+</html>

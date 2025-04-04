@@ -1,0 +1,277 @@
+/* Theme CSS based on theme.ts */
+
+/* Brand Colors */
+:root {
+  /* Primary Colors */
+  --primary-main: #054697;
+  --primary-light: #3669AB;
+  --primary-dark: #043167;
+  --primary-contrast-text: #FFFFFF;
+  
+  /* Secondary Colors */
+  --secondary-main: #FF471F;
+  --secondary-light: #FF6F52;
+  --secondary-dark: #B23115;
+  --secondary-contrast-text: #FFFFFF;
+  
+  /* Accent Colors */
+  --accent-blanc: #FBFBF7;
+  --accent-rose: #FFE8E4;
+  --accent-rose-dark: #FFD5CC;
+  --accent-nude: #B8BDD7;
+  --accent-pia: #F2D4C2;
+  --accent-blush: #E8B4B4;
+  
+  /* Text Colors */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  
+  /* Background Colors */
+  --background-default: #FBFBF7;
+  --background-paper: #FFFFFF;
+}
+
+/* Typography */
+@font-face {
+  font-family: 'Giaza';
+  src: url('../fonts/myfonts_order_6394679525546/Giaza.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--background-default);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Giaza', serif;
+  letter-spacing: -0.05em;
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+.subtitle1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.subtitle2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.body1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.body2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Buttons - Updated to match theme.ts */
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Primary button - should be accent-rose color with primary-main text */
+.btn-primary {
+  background-color: var(--accent-rose);
+  color: var(--primary-main);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-rose-dark);
+}
+
+/* Secondary button - should be accent-rose color with primary-main text */
+.btn-secondary {
+  background-color: var(--accent-rose);
+  color: var(--primary-main);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-rose-dark);
+}
+
+/* Accent button - for special cases */
+.btn-accent {
+  background-color: var(--primary-main);
+  color: var(--primary-contrast-text);
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Components */
+.chip {
+  border-radius: 0;
+  padding: 6px 12px;
+  background-color: var(--accent-rose);
+  color: var(--primary-main);
+  display: inline-block;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: var(--accent-rose);
+}
+
+/* Tabs */
+.tab {
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: var(--accent-rose);
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--primary-main);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+/* Hero Section with Video Background */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: var(--primary-contrast-text);
+}
+
+.fullscreen-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fullscreen-video-container iframe {
+  width: 150vw;
+  height: 150vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
+  background-color: rgba(5, 70, 151, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 36px;
+  }
+  
+  h3 {
+    font-size: 28px;
+  }
+  
+  .body1 {
+    font-size: 16px;
+  }
+  
+  .hero-content-container {
+    padding-top: 60px;
+  }
+}
