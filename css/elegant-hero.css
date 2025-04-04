@@ -144,7 +144,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.85));
+  background-image: linear-gradient(to bottom, var(--accent-nude), var(--accent-rose));
   display: block;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -153,17 +153,17 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, rgba(106, 76, 147, 0.9), rgba(255, 255, 255, 0.95), rgba(138, 43, 93, 0.9));
+  background-image: linear-gradient(to right, var(--accent-nude), var(--accent-blush));
   display: block;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--accent-blanc);
   margin-bottom: 2rem;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.02em;
   max-width: 36rem;
   margin-left: auto;
