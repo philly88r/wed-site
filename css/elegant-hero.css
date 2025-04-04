@@ -142,16 +142,16 @@
 }
 
 .hero-title-main {
-  color: var(--primary-dark);
+  color: var(--accent-nude);
   display: block;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 700;
 }
 
 .hero-title-accent {
-  color: var(--secondary-dark);
+  color: var(--accent-blush);
   display: block;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 700;
 }
 
