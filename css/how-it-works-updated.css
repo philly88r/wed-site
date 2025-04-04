@@ -54,7 +54,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right, #8A90B8, #A5A9C8, #8A90B8);
+  background: linear-gradient(to right, #4B5098, #6A6FA0, #4B5098);
   transform: translateY(-50%);
   z-index: 1;
   margin: 30px 0; /* Add spacing above and below the line */
@@ -87,7 +87,7 @@
   width: 70px; /* Increased size */
   height: 70px; /* Increased size */
   border-radius: 50%;
-  background-color: #8A90B8; /* Darker shade of the accent-nude color */
+  background-color: #4B5098; /* Much darker shade for better contrast */
   color: white;
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@
   margin-bottom: 30px; /* More space below the icon */
   margin-top: 30px; /* More space above the icon */
   position: relative;
-  box-shadow: 0 5px 15px rgba(138, 144, 184, 0.3); /* Updated shadow to match new color */
+  box-shadow: 0 5px 15px rgba(75, 80, 152, 0.4); /* Updated shadow to match new color */
   transition: all 0.3s ease;
 }
 
@@ -105,7 +105,7 @@
 .timeline-step:nth-child(2) .step-number,
 .timeline-step:nth-child(3) .step-number,
 .timeline-step:nth-child(4) .step-number {
-  background-color: #8A90B8; /* Consistent purplish color for all steps */
+  background-color: #4B5098; /* Consistent darker purplish color for all steps */
 }
 
 .step-number::before {
@@ -142,7 +142,7 @@
 }
 
 .step-title {
-  color: #6A6FA0; /* Darker purplish color for better readability */
+  color: #3D4180; /* Much darker purplish color for better contrast */
   font-size: 1.6rem; /* Larger font size */
   margin-bottom: 15px; /* More space below the title */
   font-weight: 600;
@@ -152,11 +152,11 @@
 .timeline-step:nth-child(2) .step-title,
 .timeline-step:nth-child(3) .step-title,
 .timeline-step:nth-child(4) .step-title {
-  color: #6A6FA0; /* Consistent purplish color for all step titles */
+  color: #3D4180; /* Consistent darker purplish color for all step titles */
 }
 
 .step-description {
-  color: var(--text-primary);
+  color: #333333; /* Darker text color for better contrast */
   font-size: 1.2rem; /* Larger font size */
   line-height: 1.6;
   margin-bottom: 20px; /* Add space below description */
