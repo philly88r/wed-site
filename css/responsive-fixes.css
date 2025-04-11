@@ -1,0 +1,73 @@
+/* Responsive Fixes to prevent content overflow */
+
+/* Global fixes */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Hero section fixes */
+.hero-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    overflow-x: hidden;
+}
+
+.hero-title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+/* App mockup section additional fixes */
+.app-mockup-feature {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.feature-content {
+    max-width: calc(100% - 70px);
+    word-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .app-mockup-text {
+        padding-right: 0;
+    }
+    
+    .app-mockup-feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .feature-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .horizontal-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
