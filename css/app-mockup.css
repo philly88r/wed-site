@@ -1,0 +1,230 @@
+/* App Mockup Section Styling */
+.app-mockup-section {
+    padding: 80px 0;
+    background-color: var(--accent-blanc);
+    position: relative;
+}
+
+.app-mockup-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-mockup-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.app-mockup-title {
+    font-family: 'Giaza', serif;
+    color: var(--primary-main);
+    margin-bottom: 20px;
+}
+
+.app-mockup-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.app-mockup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.app-mockup-text {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.app-mockup-features {
+    margin-top: 30px;
+}
+
+.app-mockup-feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.feature-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.feature-content h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-main);
+    margin-bottom: 5px;
+}
+
+.feature-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.app-mockup-phone {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.phone-frame {
+    width: 300px;
+    height: 600px;
+    background-color: #222;
+    border-radius: 40px;
+    position: relative;
+    padding: 15px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-notch {
+    width: 150px;
+    height: 30px;
+    background-color: #222;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.phone-button {
+    width: 5px;
+    height: 60px;
+    background-color: #444;
+    position: absolute;
+    right: -5px;
+    top: 120px;
+    border-radius: 0 5px 5px 0;
+}
+
+.app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.app-cta {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.app-cta .btn {
+    background-color: var(--secondary-main);
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.app-cta .btn:hover {
+    background-color: var(--secondary-dark);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .app-mockup-content {
+        flex-direction: column;
+    }
+    
+    .app-mockup-text {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .app-mockup-feature {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-mockup-section {
+        padding: 60px 0;
+    }
+    
+    .app-mockup-header {
+        margin-bottom: 40px;
+    }
+    
+    .app-mockup-title {
+        font-size: 36px;
+    }
+    
+    .app-mockup-subtitle {
+        font-size: 16px;
+    }
+    
+    .phone-frame {
+        width: 250px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-mockup-section {
+        padding: 40px 0;
+    }
+    
+    .app-mockup-feature {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .feature-content {
+        text-align: center;
+    }
+    
+    .phone-frame {
+        width: 220px;
+        height: 440px;
+    }
+}
