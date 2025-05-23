@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altare - Your Alternative Way to Get to the Altar</title>
+    <title>ALTARE: Built By Wedding Planners. Designed For Rule Breakers.</title>
+    <meta name="description" content="The ALTARE app helps alternative couples organize their nontraditional dream wedding with professional tools and support, without the wedding planner price tag.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/elegant-hero.css">
+    <link rel="stylesheet" href="css/app-mockup.css">
+    <link rel="stylesheet" href="css/animated-testimonials.css">
     <link rel="stylesheet" href="css/planning-cards.css">
     <link rel="stylesheet" href="css/tilted-scroll.css">
     <link rel="stylesheet" href="css/how-it-works-updated.css">
@@ -21,67 +23,551 @@
     <link rel="stylesheet" href="css/bold-header-updated.css">
     <link rel="stylesheet" href="css/app-mockup.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
+    <link rel="stylesheet" href="css/feature-steps.css">
+    <link rel="stylesheet" href="css/quote-section.css">
+    <link rel="stylesheet" href="css/founder-section.css">
+    <link rel="stylesheet" href="css/scrolling-quotes.css">
+    <link rel="stylesheet" href="css/why-altare-section.css">
+    <link rel="stylesheet" href="css/app-masonry.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Import Giaza font */
+        @font-face {
+            font-family: 'Giaza';
+            src: url('fonts/myfonts_order_6394679525546/Giaza.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        /* Global Font Styles */
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+        
+        /* Apply Giaza to all main headers (h2) */
+        h2 {
+            font-family: 'Giaza', serif;
+            font-weight: normal;
+        }
+        
+        /* Apply Poppins to subheadings */
+        h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+        
+        /* Day Of Coordinators Section Styles */
+        .coordinators-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .coordinators-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .coordinators-header h2 {
+            font-size: 2.5rem;
+            color: #F3471F;
+            margin-bottom: 15px;
+        }
+        
+        .coordinators-header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+        }
+        
+        .coordinators-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .coordinators-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .coordinators-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .coordinator-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .coordinator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .coordinator-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .coordinator-info {
+            padding: 25px;
+        }
+        
+        .coordinator-name {
+            font-size: 1.5rem;
+            color: #F3471F;
+            margin-bottom: 10px;
+        }
+        
+        .coordinator-bio {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .coordinator-availability {
+            margin-top: 20px;
+        }
+        
+        .calendly-link {
+            display: inline-block;
+            background-color: #F3471F;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .calendly-link:hover {
+            background-color: #d53a18;
+        }
+        
+        .availability-calendar {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .availability-calendar h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #F3471F;
+        }
+        
+        .availability-calendar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .availability-calendar li {
+            padding: 5px 0;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .availability-calendar li:last-child {
+            border-bottom: none;
+        }
+    </style>
     <script type="module" src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </head>
 <body>
-    <!-- Bold Header with ALTARE logo in the middle -->
+    <!-- Combined Header with logo and login button on the same line -->
     <header class="bold-header">
-        <div class="logo-container">
-            <img src="images/logo/altare-primary.svg" alt="Altare" class="altare-logo">
+        <div class="header-container">
+            <div class="left-nav">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+            </div>
+            <div class="logo-container">
+                <img src="images/logo/Altare Primary-Peri.svg" alt="Altare" class="altare-logo">
+            </div>
+            <div class="right-nav">
+                <a href="login-register.html" class="login-register-btn">Login / Register</a>
+            </div>
         </div>
     </header>
     
-    <!-- Horizontal Navigation -->
-    <nav class="horizontal-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="login-register.html" class="login-register-btn">Login / Register</a></li>
-            </ul>
-        </div>
-    </nav>
+    <style>
+        .bold-header {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .left-nav, .right-nav {
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .left-nav {
+            justify-content: flex-start;
+        }
+        
+        .right-nav {
+            justify-content: flex-end;
+        }
+        
+        .logo-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .altare-logo {
+            height: 50px;
+        }
+        
+        .nav-link {
+            color: #0a4697;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #F3471F;
+        }
+        
+        .login-register-btn {
+            background-color: #F3471F;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .login-register-btn:hover {
+            background-color: #d53a18;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .left-nav, .right-nav {
+                justify-content: center;
+            }
+        }
+    </style>
 
-    <section id="home" class="elegant-hero">
+    <section id="home" class="modern-hero">
         <!-- Full screen video container -->
         <div class="fullscreen-video-container">
-            <!-- Temporary placeholder for wedding video -->
-            <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(5, 70, 151, 0.1); background-image: linear-gradient(45deg, rgba(255, 71, 31, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 71, 31, 0.15) 50%, rgba(255, 71, 31, 0.15) 75%, transparent 75%, transparent); background-size: 100px 100px;"></div>
+            <!-- Video background -->
+            <video autoplay muted loop id="hero-video" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit: cover;">
+                <source src="video/Untitled design (2).mp4" type="video/mp4">
+                <!-- Fallback if video doesn't load -->
+                <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+            </video>
+            <!-- Semi-transparent overlay to improve text visibility -->
+            <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
         </div>
         
-        <!-- Elegant shapes container -->
-        <div class="elegant-shapes-container"></div>
-        
-        <div class="hero-content">
-            <div class="hero-content-inner">
-                <h1 class="hero-title" style="font-family: 'Poppins', sans-serif; font-weight: 400;">
-                    <span class="hero-title-main">YOUR ALTERNATIVE WAY</span>
-                    <span class="hero-title-accent">TO GET TO THE ALTAR?</span>
-                </h1>
-                
-                <p class="hero-subtitle" style="font-family: 'Poppins', sans-serif; font-weight: 400;">
-                    Organize every detail of your special day with our comprehensive wedding planning tools
-                </p>
-                
-                <div class="hero-actions">
-                    <a href="login-register.html" class="btn btn-primary" style="font-family: 'Poppins', sans-serif; font-weight: 400; background-color: var(--secondary-main); color: white;">Get Started</a>
+        <div class="hero-content" style="z-index: 2;">
+            <div class="container mx-auto">
+                <div class="flex-hero-container">
+                    <div class="hero-tag">
+                        <span class="tag-button">Wedding Planning Reimagined</span>
+                    </div>
+                    
+                    <div class="hero-title-container">
+                        <h1 class="hero-title">
+                            <span class="hero-title-main">If your Pinterest board could plan your</span>
+                            <span class="hero-title-dynamic">
+                                <span id="animated-title">rebellious</span>
+                            </span>
+                            <span class="hero-title-end">wedding, it would use ALTARE.</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            The wedding planning app built by planners who've seen it all. We're giving you the exact tools we use for our $10k+ clients—so you can DIY your day without the drama.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="login-register.html" class="btn-outline">See How It Works</a>
+                        <a href="login-register.html" class="btn-primary">Download The App</a>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Dark overlay for gradient effect -->
-        <div class="hero-overlay"></div>
     </section>
+    
+    <style>
+        .modern-hero {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .flex-hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-tag {
+            margin-bottom: 1rem;
+        }
+        
+        .tag-button {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hero-title-container {
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .hero-title {
+            font-family: 'Giaza', serif;
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .hero-title-main, .hero-title-end {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-title-dynamic {
+            display: block;
+            height: 1.2em;
+            position: relative;
+            margin: 0.5rem 0;
+        }
+        
+        #animated-title {
+            color: #F3471F;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.125rem;
+            color: #0a4697;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+            background-color: #ffd6d6; /* Blush color */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: #F3471F;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d93b17;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .btn-outline, .btn-primary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- Featured In Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.5rem; text-align: center; margin-bottom: 1rem; color: #F3471F;">Told Ya We're the Real Deal</h3>
+            <h2 class="featured-title" style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase; font-size: 64px; text-align: center; margin-bottom: 2rem;">FEATURED IN</h2>
+            <div class="featured-logos-container">
+                <div class="logo-container-animation">
+                    <img src="images/Brides-Logo.png" alt="Brides Magazine" class="featured-logo">
+                </div>
+                <div class="logo-container-animation">
+                    <img src="images/the knot logo.png" alt="The Knot" class="featured-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .featured-section {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .featured-logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+        
+        .logo-container-animation {
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 120px;
+        }
+        
+        .featured-logo {
+            max-width: 180px;
+            max-height: 80px;
+            object-fit: contain;
+        }
+        
+        .logo-pulse {
+            animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .featured-logos-container {
+                gap: 2rem;
+            }
+            
+            .logo-container-animation {
+                width: 160px;
+                height: 100px;
+            }
+            
+            .featured-logo {
+                max-width: 140px;
+                max-height: 70px;
+            }
+        }
+    </style>
 
     <!-- About Section -->
     <section class="about-section">
         <div class="about-container">
             <div class="about-content">
-                <h2 class="about-title" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--primary-main);">About ALTARE</h2>
-                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--secondary-main); margin-bottom: 20px;">Your Perfect Wedding Journey Starts Here</h3>
-                <p class="about-description" style="font-family: 'Poppins', sans-serif; font-weight: 400;">We're passionate about making wedding planning simple, stress-free, and enjoyable. Our comprehensive platform brings together everything you need to create your dream wedding, from managing guest lists to finding the perfect vendors.</p>
+                <h2 class="about-title" style="font-family: 'Giaza', serif; font-weight: 400; color: #0a4697; text-transform: uppercase;">YOUR ALTARE ADVANTAGES</h2>
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #F3471F; margin-bottom: 20px;">Planning your dream wedding shouldn't feel like a full-time job. Here's what makes ALTARE different from everything you've seen in the wedding industry:</h3>
                 
                 <div class="about-features">
                     <div class="about-feature">
@@ -89,8 +575,8 @@
                             <i class="fas fa-heart"></i>
                         </div>
                         <div class="feature-text">
-                            <strong>Personalized Experience</strong>
-                            Tailored to your unique wedding vision
+                            <strong>Rooted in real weddings, not random blogs</strong>
+                            Everything inside ALTARE comes from real wedding planners who've done this hundreds of times (not random internet checklists from boring couples in 2009)
                         </div>
                     </div>
                     
@@ -99,28 +585,38 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="feature-text">
-                            <strong>Save Time</strong>
-                            All your planning tools in one place
+                            <strong>Quarterly planning = your new secret wedding weapon</strong>
+                            We'll help you split your planning period into four easy parts so you always know what's next, without the doom-spiral.
                         </div>
                     </div>
                     
                     <div class="about-feature">
                         <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-paint-brush"></i>
                         </div>
                         <div class="feature-text">
-                            <strong>Stress-Free Planning</strong>
-                            Guided process with expert tips
+                            <strong>Strategic tools for creative couples</strong>
+                            Think vibey moodboards that nearly build themselves, budget calculators that don't give you major anxiety, and video tutorials so you don't have to guess and go.
                         </div>
                     </div>
                     
                     <div class="about-feature">
                         <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-hands-helping"></i>
                         </div>
                         <div class="feature-text">
-                            <strong>Always Accessible</strong>
-                            Plan from anywhere, anytime
+                            <strong>Support when you want it, freedom when you don't</strong>
+                            Book a call, upgrade your bundle, and cancel whenever. ALTARE flexes with you, not the other way around.
+                        </div>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="feature-text">
+                            <strong>Curated for your kind of love</strong>
+                            Our app is inclusive, nontraditional, and anti-perfection because we know no two love stories (or wedding plans) should ever look the same.
                         </div>
                     </div>
                 </div>
@@ -132,239 +628,489 @@
         </div>
     </section>
 
-    <!-- App Mockup Section -->
-    <section class="app-mockup-section">
-        <div class="app-mockup-container">
-            <div class="app-mockup-header">
-                <h2 class="app-mockup-title" style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--primary-main);">Experience the ALTARE App</h2>
-                <p class="app-mockup-subtitle" style="font-family: 'Poppins', sans-serif; font-weight: 400;">Our intuitive mobile app puts wedding planning at your fingertips, anywhere and anytime</p>
+    <!-- Meet the ALTARE App Section with Masonry Layout -->
+    <section class="app-masonry-section">
+        <div class="app-masonry-container">
+            <div class="app-masonry-header">
+                <h2 class="app-masonry-title">MEET THE ALTARE APP</h2>
+                <p class="app-masonry-subtitle">All of the professional planning processes without the IRL planner price tag.</p>
             </div>
             
-            <div class="app-mockup-content">
-                <div class="app-mockup-text">
-                    <p style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--text-secondary); margin-bottom: 30px; line-height: 1.6;">
-                        The ALTARE app is designed to make wedding planning effortless and enjoyable. With a clean, intuitive interface and powerful features, you'll have everything you need to plan your perfect day right in your pocket.
-                    </p>
-                    
-                    <div class="app-mockup-features">
-                        <div class="app-mockup-feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Smart Checklist</h4>
-                                <p>Track your progress with customizable to-do lists tailored to your wedding timeline</p>
-                            </div>
-                        </div>
-                        
-                        <div class="app-mockup-feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Guest Management</h4>
-                                <p>Easily manage your guest list, RSVPs, meal preferences, and seating arrangements</p>
-                            </div>
-                        </div>
-                        
-                        <div class="app-mockup-feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-dollar-sign"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Budget Tracker</h4>
-                                <p>Set budgets, track expenses, and manage payments to stay on financial track</p>
-                            </div>
-                        </div>
+            <!-- Uneven masonry layout without phone image -->
+            <div class="app-masonry-features">
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-video"></i>
                     </div>
+                    <h4 class="app-feature-title">To-The-Point Wedding Planning Video Tutorials</h4>
+                    <p class="app-feature-description">Whether you just got engaged and don't know where to start or are waist-deep in planning and overwhelmed by it all, the four ALTARE tutorials walk you through the biggest planning moments from "does this even matter?" to perfecting your day-of schedule.</p>
                 </div>
                 
-                <div class="app-mockup-phone">
-                    <div class="phone-frame">
-                        <div class="phone-notch"></div>
-                        <div class="phone-button"></div>
-                        <div class="phone-screen">
-                            <img src="images/app-screenshot-placeholder.svg" alt="ALTARE App Interface" class="app-screenshot">
-                        </div>
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-address-book"></i>
                     </div>
+                    <h4 class="app-feature-title">Big (Or Little) Guest Energy Address Book</h4>
+                    <p class="app-feature-description">Stop texting everyone in your contacts for their zip code (again). Your new ALTARE address book will store addresses in one clean space. Create your own custom address link and easily send it to all your friends and family! Invites? Handled. Sorted. Sent.</p>
+                </div>
+                
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4 class="app-feature-title">Delulu-Proof Budget Calculator</h4>
+                    <p class="app-feature-description">Enter your vision and let ALTARE handle the hard part: calculate your realistic budget and avoid the financial panic.</p>
+                </div>
+                
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 class="app-feature-title">Planning Like A Pro Timeline Calculator</h4>
+                    <p class="app-feature-description">Pop in your wedding date and let ALTARE build your personalized plan in four chill phases so you're always a step ahead without the cold feet jitters.</p>
+                </div>
+                
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h4 class="app-feature-title">Your Space, Your Flow Floor Plan + Seating Chart</h4>
+                    <p class="app-feature-description">Drag, drop, and rearrange your layout until it's just right. ALTARE makes it easy to seat your guests during each part of your special day, whether you're organizing the vibes or managing the crazy.</p>
+                </div>
+                
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4 class="app-feature-title">Aesthetics-First Moodboard Generator</h4>
+                    <p class="app-feature-description">Upload your inspo, drop your palette, or link your Pinterest, and ALTARE will curate your custom moodboard to help you visualize your vibe so you can make it happen.</p>
+                </div>
+                
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="app-feature-title">Extra Support From An Alt Wedding Pro</h4>
+                    <p class="app-feature-description">Stuck? Confused? Just need real human support for a bit? Hop on a video call with one of our seasoned ALTARE wedding planners and get custom, expert advice (without the 5-figure invoice).</p>
+                </div>
+                
+                <div class="app-feature-card">
+                    <div class="app-feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4 class="app-feature-title">Cool Couples Chat Room</h4>
+                    <p class="app-feature-description">Coming soon: a private space where non-traditional couples doing the damn thing can talk, ask, share, and support each other through every WTF moment of big-day planning.</p>
                 </div>
             </div>
             
-            <div class="app-cta">
-                <a href="login-register.html" class="btn">Start Planning Today</a>
-            </div>
+            <!-- Download button removed as requested -->
         </div>
     </section>
 
-    <section id="planning" class="planning-section">
-        <div class="container">
-            <div class="planning-header">
-                <h2>Comprehensive Planning Tools</h2>
-                <p>Everything you need to plan your perfect wedding day</p>
-            </div>
+    <!-- Quote Section with Carousel -->
+    <section class="quote-section">
+        <div class="quote-container">
+            <!-- Dot pattern background -->
+            <div class="dot-pattern"></div>
             
-            <div class="planning-cards">
-                <!-- TiltedScroll component will be inserted here via JavaScript -->
-            </div>
+            <!-- Corner squares -->
+            <div class="corner-square corner-top-left"></div>
+            <div class="corner-square corner-bottom-left"></div>
+            <div class="corner-square corner-top-right"></div>
+            <div class="corner-square corner-bottom-right"></div>
             
-            <div class="planning-actions">
-                <button class="btn btn-primary view-all-features-btn">View All Features</button>
-            </div>
-        </div>
-    </section>
-    
-    <section class="how-it-works">
-        <div class="container">
-            <div class="how-it-works-header">
-                <h2>How It Works</h2>
-                <p>Our wedding planning platform makes it easy to create your dream wedding in just a few simple steps</p>
-            </div>
-            
-            <div class="timeline-container">
-                <div class="timeline-track"></div>
-                <div class="timeline-steps">
-                    <div class="timeline-step">
-                        <div class="step-number">
-                            <i class="fas fa-user-plus step-icon"></i>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Create Account</h3>
-                            <p class="step-description">Sign up in seconds and set up your personalized wedding profile</p>
+            <div class="quote-content">
+                <p class="quote-intro">Real couples, real stories</p>
+                
+                <div class="quotes-carousel">
+                    <!-- Shreya's Quote -->
+                    <div class="quote-slide active" style="display: block;">
+                        <div class="quote-text-long">
+                            <div class="quote-line">
+                                <span class="quote-bold">"Nothing but good things to</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-bold">say. They will</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-thin">make your</span>
+                                <span class="quote-bold">uniquely personal</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-bold">wedding come to life!"</span>
+                            </div>
+                            <p class="quote-author">- Shreya</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-step">
-                        <div class="step-number">
-                            <i class="fas fa-tasks step-icon"></i>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Manage Tasks</h3>
-                            <p class="step-description">Organize your to-dos with our smart planning tools</p>
+                    <!-- Jennifer's Quote -->
+                    <div class="quote-slide" style="display: none;">
+                        <div class="quote-text-long">
+                            <div class="quote-line">
+                                <span class="quote-bold">"I'm a bit of a type-A control freak,</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-thin">but I didn't want to be stressed and not enjoy my wedding day.</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-bold">We seriously had a perfect day,</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-thin">and there's not one thing we wish would have gone differently.</span>
+                            </div>
+                            <div class="quote-line">
+                                <span class="quote-bold">We are eternally grateful."</span>
+                            </div>
+                            <p class="quote-author">- Jennifer</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-step">
-                        <div class="step-number">
-                            <i class="fas fa-users step-icon"></i>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Invite Guests</h3>
-                            <p class="step-description">Send digital invitations and track RSVPs effortlessly</p>
-                        </div>
-                    </div>
+                    <!-- Maria's quote removed -->
                     
-                    <div class="timeline-step">
-                        <div class="step-number">
-                            <i class="fas fa-glass-cheers step-icon"></i>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Celebrate!</h3>
-                            <p class="step-description">Enjoy your perfect day with everything beautifully organized</p>
-                        </div>
+                    <!-- Quote Indicators -->
+                    <div class="quote-indicators">
+                        <span class="quote-indicator active" data-index="0"></span>
+                        <span class="quote-indicator" data-index="1"></span>
                     </div>
                 </div>
             </div>
-            
-            <div class="how-it-works-cta">
-                <a href="signup.html" class="btn btn-primary">Get Started Now</a>
+        </div>
+        
+        <!-- App store logos section removed -->
+    </section>
+    
+    <!-- Why ALTARE > Everyone Else Section -->
+    <section class="why-altare-section">
+        <!-- Decorative elements removed -->
+        
+        <div class="why-altare-container">
+            <div class="why-altare-header">
+                <h2 class="why-altare-title">WHY ALTARE > EVERYONE ELSE</h2>
             </div>
+            
+            <div class="why-altare-content">
+                <div class="why-altare-point">
+                    <p>Unlike the million other wedding planners making you doubt what you really want, we're not here to push traditions or play it safe.</p>
+                    <p>We're sick of watching couples stress, overspend, and burn out…for a day that should be all about them and their partnership—not all the other superficial stuff (like who sits where and when to cut the cake).</p>
+                </div>
+                
+                <div class="why-altare-point">
+                    <p>This app is our industry rebellion: aesthetic wedding planning from your phone with none of the "do it like everyone else" pressure.</p>
+                    <p>We're not here to tell you what you should do—we're here to hand you the exact tools to pull off what you want to do.</p>
+                </div>
+            </div>
+            
+            <!-- Quote removed -->
         </div>
     </section>
+    
+    <!-- The ALTARE Way Section removed as requested -->
     
     <!-- Pricing Section -->
-    <section class="pricing-section">
-        <!-- Pricing content will be inserted via JavaScript -->
-    </section>
-
-    <!-- FAQ Section with Accordion -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <div class="faq-header">
-                <h2 class="faq-title">Frequently Asked Questions</h2>
-                <p class="faq-subtitle">Find answers to common questions about our wedding planning services and day-of coordination</p>
+    <section class="pricing-section" style="background-color: #ffe8e4 !important;">
+        <div class="pricing-header">
+            <h2 class="pricing-title" style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase;">PICK YOUR PATH</h2>
+            <p class="pricing-subtitle">Start ALTARE today and upgrade, downgrade, or cancel whenever!</p>
+        </div>
+        
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3 class="pricing-card-name">The Warm Up Act</h3>
+                    <div class="pricing-card-price">FREE</div>
+                    <p class="pricing-card-description">Perfect taste-tester for getting started.</p>
+                </div>
+                <ul class="pricing-card-features">
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        "Your Why" tutorial video with journal prompts to make your wedding uniquely yours.
+                    </li>
+                </ul>
+                <a href="login-register.html" class="pricing-card-cta">[Get Started For Free]</a>
             </div>
             
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <i class="fas fa-chevron-right accordion-icon"></i>
-                        What is day-of wedding coordination?
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <p>Day-of wedding coordination is a service where our professional coordinators manage all the details of your wedding day, allowing you and your loved ones to fully enjoy the celebration without stress. Despite the name, our service actually begins several weeks before your wedding with planning meetings, vendor confirmations, and timeline creation.</p>
-                        </div>
-                    </div>
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3 class="pricing-card-name">Let's Get This Party Planned</h3>
+                    <div class="pricing-card-price">$118<span class="pricing-card-price-period">/month</span></div>
+                    <p class="pricing-card-description">The wedding planning essentials to get your ideas out into the world.</p>
                 </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <i class="fas fa-chevron-right accordion-icon"></i>
-                        How far in advance should I book a day-of coordinator?
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <p>We recommend booking your day-of coordinator at least 6-8 months before your wedding date. Popular wedding dates can book up quickly, especially during peak wedding season (May-October), so securing your coordinator early ensures you'll have professional support for your big day.</p>
-                        </div>
-                    </div>
+                <ul class="pricing-card-features">
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Everything in The Warm Up Act
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        "Let's Get Started" tutorial video
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        "Securing Your Vendor Team" tutorial video, with an option to add-on our vendor directory
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Guest address book
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Budget generator
+                    </li>
+                </ul>
+                <a href="login-register.html" class="pricing-card-cta">[Start Party Planning]</a>
+            </div>
+            
+            <div class="pricing-card popular highlighted">
+                <div class="pricing-card-header">
+                    <h3 class="pricing-card-name">The Bare Necessities</h3>
+                    <div class="pricing-card-price">$367<span class="pricing-card-price-period">/month</span></div>
+                    <p class="pricing-card-description">This bundle takes you from "where do I start?" to "I've got this!"</p>
                 </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <i class="fas fa-chevron-right accordion-icon"></i>
-                        What's included in the $3,500 day-of coordination fee?
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <p>Our day-of coordination package includes:</p>
+                <ul class="pricing-card-features">
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Everything in Let's Get This Party Planned
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        "Diving Into Your Day" tutorial video (quarterly planning from engagement to wedding day)
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Planning timeline calculator
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        One video call with ALTARE wedding planners each month
+                    </li>
+                </ul>
+                <a href="login-register.html" class="pricing-card-cta">[Unlock The Bare Necessities]</a>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3 class="pricing-card-name">Your All-In Era</h3>
+                    <div class="pricing-card-price">$495<span class="pricing-card-price-period">/month</span></div>
+                    <p class="pricing-card-description">This bundle takes you from "I've got this" to "Oh, it's happening!!!"</p>
+                </div>
+                <ul class="pricing-card-features">
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Everything in The Bare Necessities
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Moodboard generator
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Floor plan and seating chart curator
+                    </li>
+                    <li class="pricing-card-feature">
+                        <span class="pricing-card-feature-icon">✓</span>
+                        Wedding planning chatroom (coming soon)
+                    </li>
+                </ul>
+                <a href="login-register.html" class="pricing-card-cta">[Begin Your All-In Era]</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Feature Steps Section (Altare Add-Ons) -->
+    <section class="feature-steps-section">
+        <div class="feature-steps-container">
+            <h2 class="feature-steps-title">ALTARE ADD-ONS</h2>
+
+            <div class="feature-steps-content">
+                <div class="feature-steps-list">
+                    <!-- Feature steps will be generated by JavaScript -->
+                </div>
+
+                <div class="feature-steps-image-container">
+                    <!-- Images will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="feature-steps-progress">
+                <div class="feature-steps-progress-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Day Of Coordinators Section -->
+    <section class="coordinators-section">
+        <div class="container">
+            <div class="coordinators-header">
+                <h2 style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase;">MEET OUR DAY OF COORDINATORS</h2>
+                <p>Our experienced team is ready to make your wedding day stress-free and perfectly executed</p>
+            </div>
+            
+            <!-- Animated Testimonials Component -->
+            <div class="animated-testimonials">
+                <!-- The content will be dynamically generated by JavaScript -->
+            </div>
+            
+            <!-- Coordinator Availability -->
+            <div class="coordinator-availability-section">
+                <h3 style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase; text-align: center; margin-bottom: 2rem;">BOOK YOUR COORDINATOR</h3>
+                <div class="availability-grid">
+                    <div class="availability-card">
+                        <h4 class="availability-name">Christina Thavis</h4>
+                        <a href="https://calendly.com/christina-altare" class="calendly-link" target="_blank">Schedule with Christina</a>
+                        <div class="availability-dates">
+                            <h5>Available Dates:</h5>
                             <ul>
-                                <li>Initial consultation and planning meetings</li>
-                                <li>Vendor confirmation and coordination</li>
-                                <li>Detailed wedding day timeline creation</li>
-                                <li>Rehearsal direction (up to 1 hour)</li>
-                                <li>Full wedding day coverage (up to 12 hours)</li>
-                                <li>Setup and breakdown supervision</li>
-                                <li>Professional coordination team (lead coordinator + assistant)</li>
-                                <li>Emergency kit and vendor management</li>
+                                <li>June 8, 2025</li>
+                                <li>June 22, 2025</li>
+                                <li>July 12, 2025</li>
+                                <li>July 26, 2025</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="availability-card">
+                        <h4 class="availability-name">Ani Grigorian</h4>
+                        <a href="https://calendly.com/ani-altare" class="calendly-link" target="_blank">Schedule with Ani</a>
+                        <div class="availability-dates">
+                            <h5>Available Dates:</h5>
+                            <ul>
+                                <li>June 15, 2025</li>
+                                <li>June 29, 2025</li>
+                                <li>July 5, 2025</li>
+                                <li>July 19, 2025</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="availability-card">
+                        <h4 class="availability-name">Krista Gurevich</h4>
+                        <a href="https://calendly.com/krista-altare" class="calendly-link" target="_blank">Schedule with Krista</a>
+                        <div class="availability-dates">
+                            <h5>Available Dates:</h5>
+                            <ul>
+                                <li>June 1, 2025</li>
+                                <li>June 14, 2025</li>
+                                <li>July 6, 2025</li>
+                                <li>July 20, 2025</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <style>
+            .coordinator-availability-section {
+                margin-top: 4rem;
+            }
+            
+            .availability-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+            
+            .availability-card {
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .availability-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            .availability-name {
+                font-family: 'Giaza', serif;
+                color: #0a4697;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+            
+            .calendly-link {
+                display: inline-block;
+                background-color: #F3471F;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+            
+            .calendly-link:hover {
+                background-color: #d93b19;
+                transform: translateY(-2px);
+            }
+            
+            .availability-dates h5 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                color: #2d3748;
+            }
+            
+            .availability-dates ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .availability-dates li {
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #e2e8f0;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                color: #4a5568;
+            }
+            
+            .availability-dates li:last-child {
+                border-bottom: none;
+            }
+        </style>
+    </section>
+
+    <!-- FAQ Section with Accordion -->
+    <!-- Jennifer quote section removed -->
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        
+        <div class="founder-container">
+            <div class="founder-image-container">
+                <img src="img/laramahler.jpg" alt="Lara Mahler - Founder of ALTARE" class="founder-image">
+                <div class="founder-image-bg"></div>
+            </div>
+            
+            <div class="founder-content">
+                <h2 class="founder-title">A NOTE FROM OUR FOUNDER: LARA MAHLER</h2>
                 
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <i class="fas fa-chevron-right accordion-icon"></i>
-                        How is day-of coordination different from full wedding planning?
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <p>Day-of coordination focuses specifically on executing your wedding day plans, while full wedding planning involves the entire planning process from start to finish. With day-of coordination, you handle most of the planning and vendor selection, and our coordinators step in to ensure everything runs smoothly on the actual wedding day. Full planning includes venue selection, budget management, design concepts, and all vendor recommendations and bookings throughout the entire planning process.</p>
-                        </div>
-                    </div>
+                <div class="founder-text">
+                    <p>ALTARE started with a simple question: Why are we still planning weddings like it's 1997?</p>
+                    
+                    <p>The idea that weddings have to be stressful, expensive, and follow standard wedding traditions because "that's just how it is" ???</p>
+                    
+                    <p>No thanks.</p>
+                    
+                    <p>As a wedding planner with more than a decade of experience, I knew we could do better.</p>
+                    
+                    <p>ALTARE is everything I wished I could give couples who wanted the planning support without the $10k-$18k+ price tag—it's the alt-coded app for couples ready to do weddings differently.</p>
                 </div>
                 
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <i class="fas fa-chevron-right accordion-icon"></i>
-                        Can I choose which coordinator will work with me?
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <p>Yes! We believe in the importance of a good personality match between couples and their coordinators. After your initial inquiry, we'll schedule consultation calls with available coordinators who match your wedding date and style. You can then select the coordinator you feel most comfortable with. You can view our team's profiles on our <a href="day-of-coordination.html">Day-of Coordination</a> page.</p>
-                        </div>
-                    </div>
+                <div class="founder-signature">
+                    - Lara Mahler, Founder of ALTARE & THE PRIVILEGE IS MINE.
                 </div>
                 
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <i class="fas fa-chevron-right accordion-icon"></i>
-                        Do you offer partial planning services?
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <p>Yes, we can customize our services to provide partial planning support if you need more assistance than day-of coordination but don't require full planning. This typically includes month-of coordination with additional planning meetings and vendor recommendations in specific categories. Please contact us for a custom quote based on your specific needs.</p>
-                        </div>
-                    </div>
+                <div class="founder-cta">
+                    <h3 class="founder-cta-title">Let's Rock and Roll Into Your Big Day</h3>
+                    <p class="founder-cta-text">With ALTARE, you've got the planning power of a pro and the freedom to do it your way.</p>
                 </div>
             </div>
         </div>
@@ -373,8 +1119,8 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-header">
-                <h2 class="contact-title">Get in Touch</h2>
-                <p class="contact-subtitle">Have questions or need assistance? We're here to help you create your perfect wedding day!</p>
+                <h2 class="contact-title" style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase;">GET IN TOUCH WITH THE ALTARE TEAM</h2>
+                <p class="contact-subtitle">Need a little assistance on picking the best package for planning your one-of-a-kind day? We know it takes a village, so we're here to help! Add your info below, and we'll reach out ASAP.</p>
             </div>
             
             <div class="contact-form">
@@ -382,21 +1128,32 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name">
+                            <input type="text" id="name" name="name">
                         </div>
-                        
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pronouns">Gender Pronouns</label>
+                            <input type="text" id="pronouns" name="pronouns">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Your email address">
+                            <input type="email" id="email" name="email">
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                            <input type="tel" id="phone" name="phone">
                         </div>
-                        
+                    </div>
+                    
+                    <div class="form-row">
                         <div class="form-group">
                             <label for="wedding-date">Wedding Date</label>
                             <input type="date" id="wedding-date" name="wedding-date">
@@ -405,11 +1162,11 @@
                     
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your wedding plans and how we can help"></textarea>
+                        <textarea id="message" name="message"></textarea>
                     </div>
                     
-                    <div class="form-submit">
-                        <button type="submit" class="btn-submit">Send Message</button>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn-submit" style="background-color: #F3471F; color: white;">
                     </div>
                 </form>
             </div>
@@ -456,7 +1213,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Altare. All rights reserved.</p>
+                <p>&copy; 2025 ALTARE & THE PRIVILEGE IS MINE. All rights reserved.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -488,9 +1245,14 @@
     <script src="js/displayCard.js"></script>
     <script src="js/tilted-scroll.js"></script>
     <script src="js/how-it-works.js"></script>
-    <script src="js/pricing-section.js"></script>
+    <!-- Removed pricing-section.js as requested -->
     <script src="js/accordion.js"></script>
     <script src="js/theme-toggle.js"></script>
     <script src="js/features-modal.js"></script>
+    <script src="js/hero-animation.js"></script>
+    <script src="js/logo-carousel.js"></script>
+    <script src="js/animated-testimonials.js"></script>
+    <script src="js/feature-steps.js"></script>
+    <script src="js/scrolling-quotes.js"></script>
 </body>
 </html>

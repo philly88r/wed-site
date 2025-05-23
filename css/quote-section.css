@@ -1,0 +1,170 @@
+/* Quote Section Styles - Both sections now have the same styling */
+.quote-section,
+.quote-section-alt {
+  margin: 3rem auto;
+  max-width: 1400px;
+  padding: 0 1.5rem;
+}
+
+/* Both containers have identical styling */
+.quote-container,
+.quote-container-alt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #F3471F;
+  background-color: #96B0D7;
+  margin: 0 auto;
+}
+
+/* Dot pattern background */
+.dot-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#ffffff33 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+}
+
+/* Corner squares */
+.corner-square {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #F3471F;
+  z-index: 2;
+}
+
+.corner-top-left {
+  top: -6px;
+  left: -6px;
+}
+
+.corner-bottom-left {
+  bottom: -6px;
+  left: -6px;
+}
+
+.corner-top-right {
+  top: -6px;
+  right: -6px;
+}
+
+.corner-bottom-right {
+  bottom: -6px;
+  right: -6px;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 20;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  text-align: center;
+}
+
+/* Much reduced padding for both quotes */
+.quote-content {
+  padding: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .quote-content {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-content {
+    padding: 1.5rem;
+  }
+}
+
+.quote-intro {
+  font-size: 0.7rem;
+  color: #F3471F;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .quote-intro {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-intro {
+    font-size: 0.9rem;
+  }
+}
+
+/* Both quote texts have the same smaller size */
+.quote-text,
+.quote-text-alt {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .quote-text,
+  .quote-text-alt {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-text,
+  .quote-text-alt {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+}
+
+/* Tighter line spacing for both quotes */
+.quote-line {
+  display: flex;
+  gap: 0.15rem;
+  justify-content: center;
+  margin-bottom: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .quote-line {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-line {
+    gap: 1rem;
+  }
+}
+
+.quote-bold {
+  font-weight: 600;
+}
+
+.quote-thin {
+  font-weight: 300;
+}
+
+.quote-author {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #0a4697;
+}
+
+@media (min-width: 768px) {
+  .quote-author {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,209 @@
+/* Masonry Layout for App Features */
+.app-masonry-section {
+  padding: 6rem 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-masonry-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.app-masonry-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.app-masonry-title {
+  font-family: 'Giaza', serif !important;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #0a4697;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.app-masonry-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #F3471F;
+}
+
+.app-masonry-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Uneven masonry grid layout */
+.app-masonry-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Create uneven masonry layout with different sizes */
+.app-feature-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Create uneven masonry layout with different sizes */
+.app-feature-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Uneven grid placement */
+.app-feature-card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.app-feature-card:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.app-feature-card:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.app-feature-card:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.app-feature-card:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.app-feature-card:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.app-feature-card:nth-child(7) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.app-feature-card:nth-child(8) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* Different background colors for visual interest */
+.app-feature-card:nth-child(odd) {
+  background-color: white;
+}
+
+.app-feature-card:nth-child(even) {
+  background-color: #f8f9ff;
+}
+
+/* Center content in the address book card */
+.app-feature-card:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.app-feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(243, 71, 31, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #F3471F;
+  font-size: 1.5rem;
+}
+
+.app-feature-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0a4697;
+  margin-bottom: 1rem;
+}
+
+.app-feature-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .app-masonry-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .app-feature-card:nth-child(n) {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+  
+  .app-feature-card:nth-child(1),
+  .app-feature-card:nth-child(4),
+  .app-feature-card:nth-child(5),
+  .app-feature-card:nth-child(8) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-masonry-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-feature-card:nth-child(n) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

@@ -1,0 +1,145 @@
+/* Founder Section Styles */
+.founder-section {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .founder-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+
+.founder-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .founder-image-container {
+    margin-bottom: 0;
+    flex: 0 0 350px;
+  }
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.founder-image-bg {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #F3471F;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.founder-content {
+  flex: 1;
+}
+
+.founder-title {
+  font-family: 'Giaza', serif;
+  color: #0a4697;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.founder-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #F3471F;
+}
+
+.founder-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.founder-text p {
+  margin-bottom: 1rem;
+}
+
+.founder-text p:last-child {
+  margin-bottom: 0;
+}
+
+.founder-signature {
+  font-weight: 600;
+  font-style: italic;
+  color: #0a4697;
+  margin: 2rem 0;
+}
+
+.founder-cta {
+  margin-top: 2rem;
+}
+
+.founder-cta-title {
+  color: #F3471F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.founder-cta-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Decorative elements removed */
+
+/* Placeholder for when no image is available */
+.founder-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #96B0D7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  min-height: 400px;
+}
+
+.founder-image-placeholder::before {
+  content: 'LM';
+  font-size: 4rem;
+  opacity: 0.8;
+}

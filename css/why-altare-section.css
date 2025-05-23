@@ -1,0 +1,149 @@
+/* Why ALTARE > Everyone Else Section Styles */
+.why-altare-section {
+  padding: 5rem 0;
+  background-color: #0a4697; /* Blue background */
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-altare-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.why-altare-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.why-altare-title {
+  font-family: 'Giaza', serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.why-altare-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #F3471F; /* Red accent line */
+}
+
+.why-altare-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .why-altare-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.why-altare-point {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-altare-point:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.why-altare-point p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.why-altare-point p:last-child {
+  margin-bottom: 0;
+}
+
+/* Decorative elements */
+.why-altare-dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#F3471F 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.why-altare-accent {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #F3471F;
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.accent-1 {
+  top: -50px;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.accent-2 {
+  bottom: -70px;
+  right: 15%;
+  width: 250px;
+  height: 250px;
+}
+
+/* Quote styling */
+.why-altare-quote {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  border-left: 4px solid #F3471F;
+}
+
+.why-altare-quote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.why-altare-quote-author {
+  font-weight: 600;
+  text-align: right;
+  color: #F3471F;
+}
+
+.why-altare-quote::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: Georgia, serif;
+  line-height: 1;
+}

@@ -142,16 +142,16 @@
 }
 
 .hero-title-main {
-  color: var(--accent-nude);
+  color: white;
   display: block;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   font-weight: 700;
 }
 
 .hero-title-accent {
-  color: var(--accent-blush);
+  color: white;
   display: block;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   font-weight: 700;
 }
 
@@ -166,7 +166,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-actions {

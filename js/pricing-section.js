@@ -83,13 +83,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Define payment frequencies
   const PAYMENT_FREQUENCIES = ["monthly", "yearly"];
 
-  // Initialize the pricing section
+  // Simple Pricing section has been removed as requested
+  /*
   initPricingSection({
     title: "Simple Pricing",
     subtitle: "Choose the best plan for your wedding planning needs",
     tiers: TIERS,
     frequencies: PAYMENT_FREQUENCIES
   });
+  */
 });
 
 /**

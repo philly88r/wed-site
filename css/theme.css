@@ -41,16 +41,38 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--text-primary);
-  background-color: var(--background-default);
   margin: 0;
   padding: 0;
+  color: var(--text-primary);
+  background-color: var(--background-default);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Giaza', serif;
+/* Global Font Styles */
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 18px;
+  text-transform: none;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   letter-spacing: -0.05em;
+  line-height: 1.2;
+  font-size: 24px; /* Converting from 72pt to web-appropriate size */
+  text-transform: capitalize;
+}
+
+h1, h2 {
+  font-family: 'Giaza', serif;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  font-size: 64px; /* Doubled size as requested */
+  text-transform: uppercase;
   margin: 0 0 20px 0;
+  color: #0a4697; /* Blue color as requested */
 }
 
 h1 {

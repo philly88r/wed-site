@@ -1,0 +1,126 @@
+/* Scrolling Quotes Styles */
+.quotes-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  /* Set a fixed height for the quotes box - made even taller */
+  min-height: 350px;
+  /* Allow it to expand wider */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quote-slide {
+  position: absolute; /* Changed back to absolute for fixed positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  display: none; /* Hide all slides by default */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-slide.active {
+  opacity: 1;
+  display: block; /* Show active slide */
+  z-index: 2;
+}
+
+/* Removed duplicate .quote-slide.active as it's now defined above */
+
+.quote-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.quote-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(243, 71, 31, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quote-indicator.active {
+  background-color: #F3471F;
+  transform: scale(1.2);
+}
+
+/* Adjustments for longer quotes - better sizing for more words per line */
+.quote-text-long {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .quote-text-long {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-text-long {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+}
+
+/* Make thin text bigger and bold text smaller */
+.quote-text-long .quote-thin {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.quote-text-long .quote-bold {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* Original quote text styles */
+.quote-text .quote-thin {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.quote-text .quote-bold {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/* Better spacing for longer quotes with more words per line */
+.quote-text-long .quote-line {
+  margin-bottom: 0.7rem;
+  /* Allow lines to expand wider */
+  max-width: 100%;
+  padding: 0 1rem;
+  display: block;
+  text-align: center;
+}
+
+/* Fix the quote content height */
+.quote-content {
+  position: relative;
+  height: 100%;
+}
+
+/* Make sure all quotes take up the same space */
+.quote-text, .quote-text-long {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

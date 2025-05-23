@@ -1,0 +1,162 @@
+/* Feature Steps Component Styles */
+.feature-steps-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.feature-steps-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.feature-steps-title {
+  font-family: 'Giaza', serif;
+  font-weight: 400;
+  color: #0a4697;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.feature-steps-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .feature-steps-content {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 3rem;
+  }
+}
+
+.feature-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .feature-steps-list {
+    order: 1;
+  }
+}
+
+.feature-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.feature-step.active {
+  opacity: 1;
+}
+
+.feature-step-indicator {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.feature-step.active .feature-step-indicator {
+  background-color: #F3471F;
+  border-color: #F3471F;
+  color: white;
+  transform: scale(1.1);
+}
+
+.feature-step-content {
+  flex: 1;
+}
+
+.feature-step-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #F3471F;
+}
+
+.feature-step-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.feature-step-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.feature-steps-image-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .feature-steps-image-container {
+    height: 400px;
+    order: 2;
+  }
+}
+
+.feature-step-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(100px) rotateX(-20deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.feature-step-image.active {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+.feature-step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 66%;
+  background: linear-gradient(to top, rgba(249, 249, 249, 1), rgba(249, 249, 249, 0.5), transparent);
+}
+
+.feature-steps-progress {
+  margin-top: 2rem;
+  width: 100%;
+  height: 4px;
+  background-color: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.feature-steps-progress-bar {
+  height: 100%;
+  background-color: #F3471F;
+  width: 0%;
+  transition: width 0.1s linear;
+}
