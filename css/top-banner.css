@@ -1,0 +1,39 @@
+/* Top Banner Styles */
+.top-banner {
+    background-color: #FF0000; /* Red background as requested */
+    padding: 8px 0;
+    width: 100%;
+}
+
+.top-banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-banner-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.top-banner-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFCCCB; /* Light pink color for text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.top-banner-link:hover {
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .top-banner-container {
+        justify-content: center;
+    }
+}

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/bold-header-updated.css">
     <link rel="stylesheet" href="css/app-mockup.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
+    <link rel="stylesheet" href="css/top-banner.css">
     <link rel="stylesheet" href="css/feature-steps.css">
     <link rel="stylesheet" href="css/quote-section.css">
     <link rel="stylesheet" href="css/founder-section.css">
@@ -190,17 +191,31 @@
     <script src="js/animations.js"></script>
 </head>
 <body>
-    <!-- Combined Header with logo and login button on the same line -->
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="top-banner-container">
+            <div class="top-banner-nav">
+                <!-- Home button removed as requested -->
+            </div>
+            <div class="top-banner-nav">
+                <a href="login-register.html" class="top-banner-link">Login / Register</a>
+            </div>
+        </div>
+    </div>
+    <!-- Combined Header with logo only -->
     <header class="bold-header">
         <div class="header-container">
             <div class="left-nav">
-                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <!-- Home button removed as requested -->
             </div>
             <div class="logo-container">
-                <img src="images/logo/Altare Primary-Peri.svg" alt="Altare" class="altare-logo">
+                <a href="index.html" class="logo-main-link">
+                    <img src="images/Altare Primary-Bolden.png" alt="Altare" class="altare-logo">
+                    <p class="logo-tagline" style="font-size: 1.2rem; color: #f2c8c1;">Built By Wedding Planners. Designed For Rule Breakers.</p>
+                </a>
             </div>
             <div class="right-nav">
-                <a href="login-register.html" class="login-register-btn">Login / Register</a>
+                <!-- Login/Register button removed as requested -->
             </div>
         </div>
     </header>
@@ -243,19 +258,29 @@
             flex-grow: 1;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
-        
+
+        .logo-main-link {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+        }
+
         .altare-logo {
             height: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        .nav-link {
-            color: #0a4697;
-            text-decoration: none;
+
+        .logo-tagline {
             font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s ease;
+            font-size: 10px; 
+            color: #333; 
+            margin-top: 4px;
+            line-height: 1.2;
+            text-align: center;
         }
         
         .nav-link:hover, .nav-link.active {
@@ -306,11 +331,11 @@
             <div class="container mx-auto">
                 <div class="flex-hero-container">
                     <div class="hero-tag">
-                        <span class="tag-button">Wedding Planning Reimagined</span>
+                        <!-- Wedding Planning Reimagined text removed as requested -->
                     </div>
                     
-                    <div class="hero-title-container">
-                        <h1 class="hero-title">
+                    <div class="hero-title-container" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                        <h1 class="hero-title" style="font-size: 1.8rem; line-height: 1.3;">
                             <span class="hero-title-main">If your Pinterest board could plan your</span>
                             <span class="hero-title-dynamic">
                                 <span id="animated-title">rebellious</span>
@@ -318,14 +343,8 @@
                             <span class="hero-title-end">wedding, it would use ALTARE.</span>
                         </h1>
                         
-                        <p class="hero-subtitle">
-                            The wedding planning app built by planners who've seen it all. We're giving you the exact tools we use for our $10k+ clients—so you can DIY your day without the drama.
+                        <!-- App description moved to section below -->
                         </p>
-                    </div>
-                    
-                    <div class="hero-buttons">
-                        <a href="login-register.html" class="btn-outline">See How It Works</a>
-                        <a href="login-register.html" class="btn-primary">Download The App</a>
                     </div>
                 </div>
             </div>
@@ -482,6 +501,8 @@
         }
     </style>
 
+    <!-- App Description Section removed from here and moved below the featured section -->
+
     <!-- Featured In Section -->
     <section class="featured-section">
         <div class="container">
@@ -500,7 +521,7 @@
     
     <style>
         .featured-section {
-            padding: 5rem 0;
+            padding: 5rem 0 2rem 0; /* Reduced bottom padding from 5rem to 2rem */
             background-color: #f9f9f9;
         }
         
@@ -562,11 +583,30 @@
         }
     </style>
 
+    <!-- App Description Section (Moved below featured section) -->
+    <section class="app-description-section" style="padding: 20px 20px 60px; text-align: center; background-color: #f9f9f9;">
+        <div class="container mx-auto" style="max-width: 900px;">
+            <p class="hero-subtitle" style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 30px;">
+                The wedding planning app built by planners who've seen it all. We're giving you the exact tools we use for our $10k+ clients—so you can DIY your day without the drama.
+            </p>
+            <div class="hero-buttons" style="display: flex; justify-content: center; gap: 20px;">
+                <a href="#how-it-works" class="btn-outline" style="color: #333; border-color: #333;">See How It Works</a>
+                <a href="login-register.html" class="btn-primary">Download The App</a>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" style="position: relative; overflow: hidden;">
+        <!-- Override any pseudo-elements that might be creating circles -->
+        <style>
+            .about-section::before, .about-section::after {
+                display: none !important;
+                content: none !important;
+            }
+        </style>
         <div class="about-container">
             <div class="about-content">
-                <h2 class="about-title" style="font-family: 'Giaza', serif; font-weight: 400; color: #0a4697; text-transform: uppercase;">YOUR ALTARE ADVANTAGES</h2>
                 <h3 style="font-family: 'Poppins', sans-serif; font-weight: 400; color: #F3471F; margin-bottom: 20px;">Planning your dream wedding shouldn't feel like a full-time job. Here's what makes ALTARE different from everything you've seen in the wedding industry:</h3>
                 
                 <div class="about-features">
@@ -628,82 +668,186 @@
         </div>
     </section>
 
-    <!-- Meet the ALTARE App Section with Masonry Layout -->
-    <section class="app-masonry-section">
-        <div class="app-masonry-container">
-            <div class="app-masonry-header">
-                <h2 class="app-masonry-title">MEET THE ALTARE APP</h2>
-                <p class="app-masonry-subtitle">All of the professional planning processes without the IRL planner price tag.</p>
+    <!-- Meet the ALTARE App Section with Phone Mockup -->
+    <section class="app-mockup-section" style="padding: 80px 0; background-color: #f9f9f9;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="app-mockup-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 class="app-mockup-title" style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase; font-size: 2.5rem; margin-bottom: 15px;">MEET THE ALTARE APP</h2>
+                <p class="app-mockup-subtitle" style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">All of the professional planning processes without the IRL planner price tag.</p>
             </div>
             
-            <!-- Uneven masonry layout without phone image -->
-            <div class="app-masonry-features">
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-video"></i>
+            <!-- Phone mockup with interactive features -->
+            <div class="app-mockup-container" style="display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 30px;">
+                <!-- Right side: Phone mockup -->
+                <div class="phone-mockup" style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                    <div class="phone-container" style="position: relative; width: 300px; height: 600px;">
+                        <!-- Phone frame -->
+                        <div class="phone-frame" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #0a4697; border-radius: 30px; padding: 10px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);">
+                            <!-- Phone screen -->
+                            <div class="phone-screen" style="width: 100%; height: 100%; background-color: white; border-radius: 20px; overflow: hidden; position: relative;">
+                                <!-- App header -->
+                                <div class="app-header" style="background-color: #0a4697; color: white; padding: 15px; text-align: center;">
+                                    <img src="images/logo/altare-white.svg" alt="ALTARE" style="height: 30px;">
+                                </div>
+                                
+                                <!-- App content that changes based on selected feature -->
+                                <div class="app-screen active" data-screen="1" style="padding: 20px; display: block;">
+                                    <h5 style="font-family: 'Poppins', sans-serif; font-size: 1rem; margin-bottom: 10px; color: #0a4697;">Video Tutorials</h5>
+                                    <div style="background-color: #f5f5f5; border-radius: 10px; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                        <i class="fas fa-play-circle" style="font-size: 3rem; color: #F3471F;"></i>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: #666;">Learn from professional wedding planners with our easy-to-follow video tutorials.</p>
+                                    <div style="margin-top: 20px;">
+                                        <div style="background-color: #f5f5f5; border-radius: 5px; padding: 10px; margin-bottom: 10px;">
+                                            <p style="font-size: 0.8rem; margin: 0;">Tutorial 1: Getting Started</p>
+                                        </div>
+                                        <div style="background-color: #f5f5f5; border-radius: 5px; padding: 10px; margin-bottom: 10px;">
+                                            <p style="font-size: 0.8rem; margin: 0;">Tutorial 2: Budget Planning</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="app-screen" data-screen="2" style="padding: 20px; display: none;">
+                                    <h5 style="font-family: 'Poppins', sans-serif; font-size: 1rem; margin-bottom: 10px; color: #0a4697;">Guest Address Book</h5>
+                                    <div style="margin-bottom: 15px;">
+                                        <input type="text" placeholder="Search guests..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;">
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <span style="font-size: 0.8rem; color: #666;">Total Guests: 86</span>
+                                            <span style="font-size: 0.8rem; color: #F3471F;">+ Add New</span>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px;">
+                                        <div style="background-color: #f5f5f5; border-radius: 5px; padding: 10px; margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                            <p style="font-size: 0.8rem; margin: 0;">Alex & Jamie Smith</p>
+                                            <span style="font-size: 0.8rem; color: #0a4697;">Edit</span>
+                                        </div>
+                                        <div style="background-color: #f5f5f5; border-radius: 5px; padding: 10px; margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                            <p style="font-size: 0.8rem; margin: 0;">Taylor Johnson</p>
+                                            <span style="font-size: 0.8rem; color: #0a4697;">Edit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="app-screen" data-screen="3" style="padding: 20px; display: none;">
+                                    <h5 style="font-family: 'Poppins', sans-serif; font-size: 1rem; margin-bottom: 10px; color: #0a4697;">Budget Calculator</h5>
+                                    <div style="margin-bottom: 15px;">
+                                        <div style="background-color: #f5f5f5; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
+                                            <p style="font-size: 0.8rem; margin: 0 0 5px 0; color: #666;">Total Budget</p>
+                                            <h6 style="font-size: 1.2rem; margin: 0; color: #0a4697;">$28,500</h6>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                            <div style="width: 48%; background-color: #f5f5f5; border-radius: 10px; padding: 10px;">
+                                                <p style="font-size: 0.7rem; margin: 0 0 5px 0; color: #666;">Spent</p>
+                                                <h6 style="font-size: 0.9rem; margin: 0; color: #F3471F;">$12,350</h6>
+                                            </div>
+                                            <div style="width: 48%; background-color: #f5f5f5; border-radius: 10px; padding: 10px;">
+                                                <p style="font-size: 0.7rem; margin: 0 0 5px 0; color: #666;">Remaining</p>
+                                                <h6 style="font-size: 0.9rem; margin: 0; color: #4CAF50;">$16,150</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="app-screen" data-screen="4" style="padding: 20px; display: none;">
+                                    <h5 style="font-family: 'Poppins', sans-serif; font-size: 1rem; margin-bottom: 10px; color: #0a4697;">Timeline Calculator</h5>
+                                    <div style="margin-bottom: 15px;">
+                                        <div style="background-color: #f5f5f5; border-radius: 10px; padding: 15px; margin-bottom: 15px; display: flex; align-items: center;">
+                                            <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #0a4697; color: white; display: flex; align-items: center; justify-content: center; margin-right: 10px;">1</div>
+                                            <div>
+                                                <h6 style="font-size: 0.9rem; margin: 0 0 5px 0; color: #0a4697;">Planning Phase</h6>
+                                                <p style="font-size: 0.7rem; margin: 0; color: #666;">12-9 months before wedding</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="app-feature-title">To-The-Point Wedding Planning Video Tutorials</h4>
-                    <p class="app-feature-description">Whether you just got engaged and don't know where to start or are waist-deep in planning and overwhelmed by it all, the four ALTARE tutorials walk you through the biggest planning moments from "does this even matter?" to perfecting your day-of schedule.</p>
                 </div>
                 
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-address-book"></i>
+                <!-- Left side: Feature navigation -->
+                <div class="app-features-nav" style="flex: 1; min-width: 300px;">
+                    <div class="feature-nav-header" style="margin-bottom: 30px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #F3471F; margin-bottom: 10px;">App Features</h3>
+                        <p style="font-family: 'Poppins', sans-serif; color: var(--text-secondary);">Explore our planning tools:</p>
                     </div>
-                    <h4 class="app-feature-title">Big (Or Little) Guest Energy Address Book</h4>
-                    <p class="app-feature-description">Stop texting everyone in your contacts for their zip code (again). Your new ALTARE address book will store addresses in one clean space. Create your own custom address link and easily send it to all your friends and family! Invites? Handled. Sorted. Sent.</p>
-                </div>
-                
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-calculator"></i>
+                    
+                    <!-- Feature cards carousel with pause button -->
+                    <div class="feature-carousel-controls" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <button id="prev-feature" class="nav-arrow" style="background: none; border: none; font-size: 1.5rem; color: #0a4697; cursor: pointer;"><i class="fas fa-arrow-left"></i></button>
+                        <span id="feature-counter" style="font-family: 'Poppins', sans-serif; font-weight: 500;">1/8</span>
+                        <button id="pause-feature" class="nav-arrow" style="background: none; border: none; font-size: 1.5rem; color: #0a4697; cursor: pointer;"><i class="fas fa-pause"></i></button>
+                        <button id="next-feature" class="nav-arrow" style="background: none; border: none; font-size: 1.5rem; color: #0a4697; cursor: pointer;"><i class="fas fa-arrow-right"></i></button>
                     </div>
-                    <h4 class="app-feature-title">Delulu-Proof Budget Calculator</h4>
-                    <p class="app-feature-description">Enter your vision and let ALTARE handle the hard part: calculate your realistic budget and avoid the financial panic.</p>
-                </div>
-                
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
+                    
+                    <!-- Feature cards that will be shown/hidden -->
+                    <div class="feature-cards-container">
+                        <div class="app-feature-card active" data-feature="1" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: block;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">To-The-Point Wedding Planning Video Tutorials</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Whether you just got engaged and don't know where to start or are waist-deep in planning and overwhelmed by it all, the four ALTARE tutorials walk you through the biggest planning moments from "does this even matter?" to perfecting your day-of schedule.</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="2" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-address-book"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Big (Or Little) Guest Energy Address Book</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Stop texting everyone in your contacts for their zip code (again). Your new ALTARE address book will store addresses in one clean space. Create your own custom address link and easily send it to all your friends and family! Invites? Handled. Sorted. Sent.</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="3" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Delulu-Proof Budget Calculator</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Enter your vision and let ALTARE handle the hard part: calculate your realistic budget and avoid the financial panic.</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="4" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Planning Like A Pro Timeline Calculator</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Pop in your wedding date and let ALTARE build your personalized plan in four chill phases so you're always a step ahead without the cold feet jitters.</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="5" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-th"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Your Space, Your Flow Floor Plan + Seating Chart</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Drag, drop, and rearrange your layout until it's just right. ALTARE makes it easy to seat your guests during each part of your special day, whether you're organizing the vibes or managing the crazy.</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="6" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Aesthetics-First Moodboard Generator</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Upload your inspo, drop your palette, or link your Pinterest, and ALTARE will curate your custom moodboard to help you visualize your vibe so you can make it happen.</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="7" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Extra Support From An Alt Wedding Pro</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Stuck? Confused? Just need real human support for a bit? Hop on a video call with one of our seasoned ALTARE wedding planners and get custom, expert advice (without the 5-figure invoice).</p>
+                        </div>
+                        
+                        <div class="app-feature-card" data-feature="8" style="background: #ffd6d6; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; display: none;">
+                            <div class="app-feature-icon" style="font-size: 2rem; color: #F3471F; margin-bottom: 15px;">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4 class="app-feature-title" style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1.2rem; margin-bottom: 10px; color: #0a4697;">Cool Couples Chat Room</h4>
+                            <p class="app-feature-description" style="font-family: 'Poppins', sans-serif; color: var(--text-secondary); line-height: 1.6;">Coming soon: a private space where non-traditional couples doing the damn thing can talk, ask, share, and support each other through every WTF moment of big-day planning.</p>
+                        </div>
                     </div>
-                    <h4 class="app-feature-title">Planning Like A Pro Timeline Calculator</h4>
-                    <p class="app-feature-description">Pop in your wedding date and let ALTARE build your personalized plan in four chill phases so you're always a step ahead without the cold feet jitters.</p>
-                </div>
-                
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-th"></i>
-                    </div>
-                    <h4 class="app-feature-title">Your Space, Your Flow Floor Plan + Seating Chart</h4>
-                    <p class="app-feature-description">Drag, drop, and rearrange your layout until it's just right. ALTARE makes it easy to seat your guests during each part of your special day, whether you're organizing the vibes or managing the crazy.</p>
-                </div>
-                
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h4 class="app-feature-title">Aesthetics-First Moodboard Generator</h4>
-                    <p class="app-feature-description">Upload your inspo, drop your palette, or link your Pinterest, and ALTARE will curate your custom moodboard to help you visualize your vibe so you can make it happen.</p>
-                </div>
-                
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h4 class="app-feature-title">Extra Support From An Alt Wedding Pro</h4>
-                    <p class="app-feature-description">Stuck? Confused? Just need real human support for a bit? Hop on a video call with one of our seasoned ALTARE wedding planners and get custom, expert advice (without the 5-figure invoice).</p>
-                </div>
-                
-                <div class="app-feature-card">
-                    <div class="app-feature-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h4 class="app-feature-title">Cool Couples Chat Room</h4>
-                    <p class="app-feature-description">Coming soon: a private space where non-traditional couples doing the damn thing can talk, ask, share, and support each other through every WTF moment of big-day planning.</p>
                 </div>
             </div>
-            
-            <!-- Download button removed as requested -->
         </div>
     </section>
 
@@ -743,35 +887,7 @@
                         </div>
                     </div>
                     
-                    <!-- Jennifer's Quote -->
-                    <div class="quote-slide" style="display: none;">
-                        <div class="quote-text-long">
-                            <div class="quote-line">
-                                <span class="quote-bold">"I'm a bit of a type-A control freak,</span>
-                            </div>
-                            <div class="quote-line">
-                                <span class="quote-thin">but I didn't want to be stressed and not enjoy my wedding day.</span>
-                            </div>
-                            <div class="quote-line">
-                                <span class="quote-bold">We seriously had a perfect day,</span>
-                            </div>
-                            <div class="quote-line">
-                                <span class="quote-thin">and there's not one thing we wish would have gone differently.</span>
-                            </div>
-                            <div class="quote-line">
-                                <span class="quote-bold">We are eternally grateful."</span>
-                            </div>
-                            <p class="quote-author">- Jennifer</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Maria's quote removed -->
-                    
-                    <!-- Quote Indicators -->
-                    <div class="quote-indicators">
-                        <span class="quote-indicator active" data-index="0"></span>
-                        <span class="quote-indicator" data-index="1"></span>
-                    </div>
+                    <!-- Other quotes removed as requested -->
                 </div>
             </div>
         </div>
@@ -785,7 +901,7 @@
         
         <div class="why-altare-container">
             <div class="why-altare-header">
-                <h2 class="why-altare-title">WHY ALTARE > EVERYONE ELSE</h2>
+                <h2 class="why-altare-title" style="color: white;">WHY ALTARE > EVERYONE ELSE</h2>
             </div>
             
             <div class="why-altare-content">
@@ -805,6 +921,44 @@
     </section>
     
     <!-- The ALTARE Way Section removed as requested -->
+    
+    <!-- Maria's Review Section -->
+    <section class="quote-section" style="margin-bottom: 3rem;">
+        <div class="quote-container">
+            <!-- Dot pattern background -->
+            <div class="dot-pattern"></div>
+            
+            <!-- Corner squares -->
+            <div class="corner-square corner-top-left"></div>
+            <div class="corner-square corner-bottom-left"></div>
+            <div class="corner-square corner-top-right"></div>
+            <div class="corner-square corner-bottom-right"></div>
+            
+            <div class="quote-content">
+                <div class="quote-text-long">
+                    <div class="quote-line">
+                        <span class="quote-bold">"A godsend! Of all of my wedding vendors, Lara and Nicole were</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">the greatest value-add to having a stress-free wedding day.</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-thin">If we hadn't hired them, the final month of wedding planning and day-of</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-thin">would have been so much more stressful.</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">We could not have pulled it off without them.</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">Thank you so much!"</span>
+                    </div>
+                    <p class="quote-author">- Maria</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Pricing Section -->
     <section class="pricing-section" style="background-color: #ffe8e4 !important;">
@@ -916,6 +1070,41 @@
         </div>
     </section>
     
+    <!-- Marissa's Quote Section -->
+    <section class="quote-section" style="margin-bottom: 3rem;">
+        <div class="quote-container">
+            <!-- Dot pattern background -->
+            <div class="dot-pattern"></div>
+            
+            <!-- Corner squares -->
+            <div class="corner-square corner-top-left"></div>
+            <div class="corner-square corner-bottom-left"></div>
+            <div class="corner-square corner-top-right"></div>
+            <div class="corner-square corner-bottom-right"></div>
+            
+            <div class="quote-content">
+                <div class="quote-text-long">
+                    <div class="quote-line">
+                        <span class="quote-bold">"We worked with Krista, and on the day-of she and the team were amazing!</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-thin">We stayed ahead of schedule, something my husband and I were really concerned about,</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-thin">and we were able to get all of the pictures we wanted before the sun set.</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">The day-of was so stress-free and easy.</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">Both my husband and I are so happy - highly, highly recommend!"</span>
+                    </div>
+                    <p class="quote-author">- Marissa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Feature Steps Section (Altare Add-Ons) -->
     <section class="feature-steps-section">
         <div class="feature-steps-container">
@@ -950,131 +1139,42 @@
                 <!-- The content will be dynamically generated by JavaScript -->
             </div>
             
-            <!-- Coordinator Availability -->
-            <div class="coordinator-availability-section">
-                <h3 style="font-family: 'Giaza', serif; color: #0a4697; text-transform: uppercase; text-align: center; margin-bottom: 2rem;">BOOK YOUR COORDINATOR</h3>
-                <div class="availability-grid">
-                    <div class="availability-card">
-                        <h4 class="availability-name">Christina Thavis</h4>
-                        <a href="https://calendly.com/christina-altare" class="calendly-link" target="_blank">Schedule with Christina</a>
-                        <div class="availability-dates">
-                            <h5>Available Dates:</h5>
-                            <ul>
-                                <li>June 8, 2025</li>
-                                <li>June 22, 2025</li>
-                                <li>July 12, 2025</li>
-                                <li>July 26, 2025</li>
-                            </ul>
-                        </div>
+            <!-- Coordinator Availability Section removed as requested -->
+    </section>
+
+    <!-- Jennifer's Quote Section -->
+    <section class="quote-section" style="margin-bottom: 3rem;">
+        <div class="quote-container">
+            <!-- Dot pattern background -->
+            <div class="dot-pattern"></div>
+            
+            <!-- Corner squares -->
+            <div class="corner-square corner-top-left"></div>
+            <div class="corner-square corner-bottom-left"></div>
+            <div class="corner-square corner-top-right"></div>
+            <div class="corner-square corner-bottom-right"></div>
+            
+            <div class="quote-content">
+                <div class="quote-text-long">
+                    <div class="quote-line">
+                        <span class="quote-bold">"I'm a bit of a type-A control freak,</span>
                     </div>
-                    
-                    <div class="availability-card">
-                        <h4 class="availability-name">Ani Grigorian</h4>
-                        <a href="https://calendly.com/ani-altare" class="calendly-link" target="_blank">Schedule with Ani</a>
-                        <div class="availability-dates">
-                            <h5>Available Dates:</h5>
-                            <ul>
-                                <li>June 15, 2025</li>
-                                <li>June 29, 2025</li>
-                                <li>July 5, 2025</li>
-                                <li>July 19, 2025</li>
-                            </ul>
-                        </div>
+                    <div class="quote-line">
+                        <span class="quote-thin">but I didn't want to be stressed and not enjoy my wedding day.</span>
                     </div>
-                    
-                    <div class="availability-card">
-                        <h4 class="availability-name">Krista Gurevich</h4>
-                        <a href="https://calendly.com/krista-altare" class="calendly-link" target="_blank">Schedule with Krista</a>
-                        <div class="availability-dates">
-                            <h5>Available Dates:</h5>
-                            <ul>
-                                <li>June 1, 2025</li>
-                                <li>June 14, 2025</li>
-                                <li>July 6, 2025</li>
-                                <li>July 20, 2025</li>
-                            </ul>
-                        </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">We seriously had a perfect day,</span>
                     </div>
+                    <div class="quote-line">
+                        <span class="quote-thin">and there's not one thing we wish would have gone differently.</span>
+                    </div>
+                    <div class="quote-line">
+                        <span class="quote-bold">We are eternally grateful. Thank you!!!"</span>
+                    </div>
+                    <p class="quote-author">- Jennifer</p>
                 </div>
             </div>
         </div>
-        
-        <style>
-            .coordinator-availability-section {
-                margin-top: 4rem;
-            }
-            
-            .availability-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 2rem;
-                margin-top: 2rem;
-            }
-            
-            .availability-card {
-                background-color: white;
-                border-radius: 1rem;
-                padding: 2rem;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            
-            .availability-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-            
-            .availability-name {
-                font-family: 'Giaza', serif;
-                color: #0a4697;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                text-transform: uppercase;
-            }
-            
-            .calendly-link {
-                display: inline-block;
-                background-color: #F3471F;
-                color: white;
-                padding: 0.75rem 1.5rem;
-                border-radius: 0.5rem;
-                text-decoration: none;
-                font-weight: 600;
-                margin-bottom: 1.5rem;
-                transition: background-color 0.3s ease, transform 0.3s ease;
-            }
-            
-            .calendly-link:hover {
-                background-color: #d93b19;
-                transform: translateY(-2px);
-            }
-            
-            .availability-dates h5 {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-                font-size: 1rem;
-                margin-bottom: 0.5rem;
-                color: #2d3748;
-            }
-            
-            .availability-dates ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            
-            .availability-dates li {
-                padding: 0.5rem 0;
-                border-bottom: 1px solid #e2e8f0;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 400;
-                color: #4a5568;
-            }
-            
-            .availability-dates li:last-child {
-                border-bottom: none;
-            }
-        </style>
     </section>
 
     <!-- FAQ Section with Accordion -->
@@ -1112,9 +1212,15 @@
                     <h3 class="founder-cta-title">Let's Rock and Roll Into Your Big Day</h3>
                     <p class="founder-cta-text">With ALTARE, you've got the planning power of a pro and the freedom to do it your way.</p>
                 </div>
+                
+                <!-- Jennifer's quote moved to its own section -->
             </div>
         </div>
     </section>
+
+    <!-- Jennifer's quote moved between Day of Coordinators and Founder section -->
+
+    <!-- Marissa's quote moved to after the pricing section -->
 
     <section id="contact" class="contact-section">
         <div class="contact-container">
@@ -1254,5 +1360,90 @@
     <script src="js/animated-testimonials.js"></script>
     <script src="js/feature-steps.js"></script>
     <script src="js/scrolling-quotes.js"></script>
+    
+    <!-- App Mockup Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const prevButton = document.getElementById('prev-feature');
+            const nextButton = document.getElementById('next-feature');
+            const pauseButton = document.getElementById('pause-feature');
+            const featureCounter = document.getElementById('feature-counter');
+            const featureCards = document.querySelectorAll('.app-feature-card');
+            const appScreens = document.querySelectorAll('.app-screen');
+            
+            let currentFeature = 1;
+            const totalFeatures = featureCards.length;
+            let autoScrollInterval;
+            let isPaused = false;
+            
+            // Update display
+            function updateDisplay() {
+                // Update counter
+                featureCounter.textContent = `${currentFeature}/${totalFeatures}`;
+                
+                // Hide all feature cards and screens
+                featureCards.forEach(card => card.style.display = 'none');
+                appScreens.forEach(screen => screen.style.display = 'none');
+                
+                // Show current feature card and screen
+                const currentCard = document.querySelector(`.app-feature-card[data-feature="${currentFeature}"]`);
+                const currentScreen = document.querySelector(`.app-screen[data-screen="${currentFeature}"]`);
+                
+                if (currentCard) currentCard.style.display = 'block';
+                if (currentScreen) currentScreen.style.display = 'block';
+            }
+            
+            // Start automatic scrolling
+            function startAutoScroll() {
+                if (!autoScrollInterval) {
+                    autoScrollInterval = setInterval(function() {
+                        if (!isPaused) {
+                            currentFeature++;
+                            if (currentFeature > totalFeatures) currentFeature = 1;
+                            updateDisplay();
+                        }
+                    }, 5000); // Change slide every 5 seconds
+                }
+            }
+            
+            // Toggle pause/play
+            function togglePause() {
+                isPaused = !isPaused;
+                pauseButton.innerHTML = isPaused ? '<i class="fas fa-play"></i>' : '<i class="fas fa-pause"></i>';
+            }
+            
+            // Previous button click
+            prevButton.addEventListener('click', function() {
+                currentFeature--;
+                if (currentFeature < 1) currentFeature = totalFeatures;
+                updateDisplay();
+            });
+            
+            // Pause button click
+            pauseButton.addEventListener('click', togglePause);
+            
+            // Next button click
+            nextButton.addEventListener('click', function() {
+                currentFeature++;
+                if (currentFeature > totalFeatures) currentFeature = 1;
+                updateDisplay();
+            });
+            
+            // Initialize
+            updateDisplay();
+            startAutoScroll();
+            
+            // Reset timer when manually changing slides
+            [prevButton, nextButton].forEach(button => {
+                button.addEventListener('click', function() {
+                    // Clear existing interval and restart
+                    clearInterval(autoScrollInterval);
+                    autoScrollInterval = null;
+                    startAutoScroll();
+                });
+            });
+        });
+    </script>
 </body>
 </html>

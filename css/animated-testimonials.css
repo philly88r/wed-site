@@ -8,17 +8,17 @@
 .testimonial-carousel-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 6rem; /* Increased from 4rem */
     align-items: center;
 }
 
 @media (min-width: 768px) {
     .testimonial-carousel-container {
         grid-template-columns: 0.85fr 1.15fr; /* More space for images, less for text */
-        gap: 6rem;
+        gap: 8rem; /* Increased from 6rem */
     }
     .testimonial-content-section {
-        padding-left: 1.5rem; /* Decrease left padding for text */
+        padding-left: 2.5rem; /* Increased from 1.5rem */
     }
 }
 
@@ -26,11 +26,16 @@
     width: 90%; /* Reduce width to prevent spill */
     margin: 0 auto; /* Center it if it becomes narrower than grid column */
     position: relative;
-    height: 400px;
+    height: 450px; /* Increased height for better visibility */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Add subtle shadow to create depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .testimonial-image-container {
@@ -93,9 +98,9 @@
     border-radius: 1.5rem;
 }
 
-/* Specific adjustment for Ani's image */
-.ani-image-adjustment .testimonial-image {
-    object-position: center 20%;
+/* Coordinator image positioning */
+.testimonial-image-wrapper .testimonial-image {
+    object-position: center;
 }
 
 .testimonial-content-section {
@@ -103,35 +108,59 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+/* Add a subtle divider between image and content */
+.testimonial-content-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #F3471F 20%, #F3471F 80%, transparent);
+    opacity: 0.3;
 }
 
 .testimonial-name {
     font-family: 'Giaza', serif;
-    font-size: 2rem;
+    font-size: 2.25rem; /* Increased size */
     font-weight: 700;
     color: #0a4697;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem; /* Increased spacing */
     text-transform: uppercase;
     transition: opacity 0.3s ease;
+    /* Add subtle text shadow for depth */
+    text-shadow: 1px 1px 2px rgba(10, 70, 151, 0.1);
 }
 
 .testimonial-designation {
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem; /* Increased size */
     font-weight: 500;
     color: #F3471F;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Increased spacing */
     transition: opacity 0.3s ease;
+    /* Add subtle border */
+    border-bottom: 1px solid rgba(243, 71, 31, 0.2);
+    padding-bottom: 0.75rem;
 }
 
 .testimonial-quote {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.7; /* Increased line height */
     color: #4a5568;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Increased spacing */
     transition: opacity 0.3s ease;
+    /* Add paragraph spacing for better readability */
+    padding: 0 0.5rem;
+    /* Add subtle background for text */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
 }
 
 .testimonial-schedule-button {

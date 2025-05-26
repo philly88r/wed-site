@@ -90,29 +90,7 @@
   z-index: 1;
 }
 
-.why-altare-accent {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-color: #F3471F;
-  opacity: 0.15;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.accent-1 {
-  top: -50px;
-  left: 10%;
-  width: 200px;
-  height: 200px;
-}
-
-.accent-2 {
-  bottom: -70px;
-  right: 15%;
-  width: 250px;
-  height: 250px;
-}
+/* Circular accent elements removed as requested */
 
 /* Quote styling */
 .why-altare-quote {
